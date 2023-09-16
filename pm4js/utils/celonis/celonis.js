@@ -400,9 +400,9 @@ CelonisMapper.PROXY_URL_GET = "http://localhost:5004/getWrapper";
 CelonisMapper.PROXY_URL_POST = "http://localhost:5004/postWrapper";
 CelonisMapper.PROXY_URL_PUT = "http://localhost:5004/putWrapper";
 try {
-	global.retus = require("retus");
-	require('../../pm4js.js');
-	global.CelonisMapper = CelonisMapper;
+	globalThis.retus = require("retus");
+  require("../../pm4js.js");
+  globalThis.CelonisMapper = CelonisMapper;
 	module.exports = {CelonisMapper: CelonisMapper};
 	CelonisMapper.IS_NODE = true;
 }

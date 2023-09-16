@@ -122,7 +122,7 @@ class SqliteOcel2Exporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {SqliteOcel2Exporter: SqliteOcel2Exporter};
-	global.SqliteOcel2Exporter = SqliteOcel2Exporter;
+	globalThis.SqliteOcel2Exporter = SqliteOcel2Exporter;
 }
 catch (err) {
 	// not in node

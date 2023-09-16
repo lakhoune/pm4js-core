@@ -56,7 +56,7 @@ try {
 	require('../../../../pm4js.js');
 	require('../../../conformance/alignments/heapq.js');
 	module.exports = {DfgPlayout: DfgPlayout};
-	global.DfgPlayout = DfgPlayout;
+	globalThis.DfgPlayout = DfgPlayout;
 }
 catch (err) {
 	// not in Node

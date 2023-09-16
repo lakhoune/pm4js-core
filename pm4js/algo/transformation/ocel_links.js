@@ -160,7 +160,7 @@ class OcelLinkAnalysis {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelLinkAnalysis: OcelLinkAnalysis};
-	global.OcelLinkAnalysis = OcelLinkAnalysis;
+	globalThis.OcelLinkAnalysis = OcelLinkAnalysis;
 }
 catch (err) {
 	// not in node

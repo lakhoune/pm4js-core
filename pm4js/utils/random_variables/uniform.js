@@ -89,7 +89,7 @@ UniformRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.UniformRandomVariable = UniformRandomVariable;
+	globalThis.UniformRandomVariable = UniformRandomVariable;
 	module.exports = {UniformRandomVariable: UniformRandomVariable};
 }
 catch (err) {

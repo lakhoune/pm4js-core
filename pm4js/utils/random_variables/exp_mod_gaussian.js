@@ -87,7 +87,7 @@ class ExponentiallyModifiedGaussian {
 
 try {
 	require('../../pm4js.js');
-	global.ExponentiallyModifiedGaussian = ExponentiallyModifiedGaussian;
+	globalThis.ExponentiallyModifiedGaussian = ExponentiallyModifiedGaussian;
 	module.exports = {ExponentiallyModifiedGaussian: ExponentiallyModifiedGaussian};
 }
 catch (err) {

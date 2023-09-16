@@ -1342,10 +1342,10 @@ IntervalTreeNode.IntervalComparator = IntervalComparator;
 
 try {
 	module.exports = {IntervalTree: IntervalTree, IntervalTreeNode: IntervalTreeNode, Interval: Interval, SortedArray: SortedArray};
-	global.IntervalTree = IntervalTree;
-	global.IntervalTreeNode = IntervalTreeNode;
-	global.Interval = Interval;
-	global.SortedArray = SortedArray;
+	globalThis.IntervalTree = IntervalTree;
+  globalThis.IntervalTreeNode = IntervalTreeNode;
+  globalThis.Interval = Interval;
+  globalThis.SortedArray = SortedArray;
 }
 catch (err) {
 	// not in Node.JS

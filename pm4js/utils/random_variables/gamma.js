@@ -106,7 +106,7 @@ GammaRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.GammaRandomVariable = GammaRandomVariable;
+	globalThis.GammaRandomVariable = GammaRandomVariable;
 	module.exports = {GammaRandomVariable: GammaRandomVariable};
 }
 catch (err) {

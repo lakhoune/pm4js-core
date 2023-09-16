@@ -52,8 +52,8 @@ class ProcessTree {
 try {
 	require('../../pm4js.js');
 	module.exports = { ProcessTree: ProcessTree, ProcessTreeOperator: ProcessTreeOperator };
-	global.ProcessTree = ProcessTree;
-	global.ProcessTreeOperator = ProcessTreeOperator;
+	globalThis.ProcessTree = ProcessTree;
+  globalThis.ProcessTreeOperator = ProcessTreeOperator;
 }
 catch (err) {
 	// not in Node

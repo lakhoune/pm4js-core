@@ -151,8 +151,8 @@ class XmlOcelImporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {XmlOcelImporter: XmlOcelImporter};
-	global.XmlOcelImporter = XmlOcelImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.XmlOcelImporter = XmlOcelImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in node

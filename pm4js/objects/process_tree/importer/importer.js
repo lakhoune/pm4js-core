@@ -66,8 +66,8 @@ try {
 	require('../../../pm4js.js');
 	require('../process_tree.js');
 	module.exports = {PtmlImporter: PtmlImporter};
-	global.PtmlImporter = PtmlImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.PtmlImporter = PtmlImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node

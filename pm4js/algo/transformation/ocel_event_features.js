@@ -385,7 +385,7 @@ class OcelEventFeatures {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelEventFeatures: OcelEventFeatures};
-	global.OcelEventFeatures = OcelEventFeatures;
+	globalThis.OcelEventFeatures = OcelEventFeatures;
 }
 catch (err) {
 	// not in node

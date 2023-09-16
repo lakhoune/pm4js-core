@@ -69,7 +69,7 @@ class PriorityQueue {
 try {
 	require('../../../pm4js.js');
 	module.exports = {PriorityQueue: PriorityQueue};
-	global.PriorityQueue = PriorityQueue;
+	globalThis.PriorityQueue = PriorityQueue;
 }
 catch (err) {
 	// not in Node

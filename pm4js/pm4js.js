@@ -126,8 +126,8 @@ Pm4JS.latestIssuedUuid = "";
 
 try {
 	module.exports = {Pm4JS: Pm4JS, Pm4JSObserverExample: Pm4JSObserverExample};
-	global.Pm4JS = Pm4JS;
-	global.Pm4JSObserverExample = Pm4JSObserverExample;
+	globalThis.Pm4JS = Pm4JS;
+  globalThis.Pm4JSObserverExample = Pm4JSObserverExample;
 }
 catch (err) {
 	// not in node

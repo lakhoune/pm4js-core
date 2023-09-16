@@ -67,7 +67,7 @@ try {
 	require('../../../pm4js.js');
 	require('../bpmn_graph.js');
 	module.exports = {DagreBPMNLayouting: DagreBPMNLayouting};
-	global.DagreBPMNLayouting = DagreBPMNLayouting;
+	globalThis.DagreBPMNLayouting = DagreBPMNLayouting;
 }
 catch (err) {
 	// not in Node

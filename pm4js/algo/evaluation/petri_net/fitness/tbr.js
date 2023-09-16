@@ -12,7 +12,7 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../conformance/tokenreplay/algorithm.js");
 	module.exports = {TbrFitness: TbrFitness};
-	global.TbrFitness = TbrFitness;
+	globalThis.TbrFitness = TbrFitness;
 }
 catch (err) {
 	// not in Node

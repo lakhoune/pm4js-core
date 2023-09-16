@@ -59,7 +59,7 @@ class TemporalProfileConformance {
 try {
 	require("../../../pm4js.js");
 	module.exports = {TemporalProfileConformance: TemporalProfileConformance};
-	global.TemporalProfileConformance = TemporalProfileConformance;
+	globalThis.TemporalProfileConformance = TemporalProfileConformance;
 }
 catch (err) {
 	// not in Node.JS

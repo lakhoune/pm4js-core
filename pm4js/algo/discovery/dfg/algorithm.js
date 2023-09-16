@@ -156,8 +156,8 @@ try {
 	require("../../../objects/dfg/frequency/obj.js");
 	require("../../../objects/dfg/performance/obj.js");
 	module.exports = {FrequencyDfgDiscovery: FrequencyDfgDiscovery, PerformanceDfgDiscovery: PerformanceDfgDiscovery};
-	global.FrequencyDfgDiscovery = FrequencyDfgDiscovery;
-	global.PerformanceDfgDiscovery = PerformanceDfgDiscovery;
+	globalThis.FrequencyDfgDiscovery = FrequencyDfgDiscovery;
+  globalThis.PerformanceDfgDiscovery = PerformanceDfgDiscovery;
 }
 catch (err) {
 	// not in Node.JS

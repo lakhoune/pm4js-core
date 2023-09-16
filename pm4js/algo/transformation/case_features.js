@@ -567,7 +567,7 @@ try {
 	require('../discovery/dfg/algorithm.js');
 	require('../../statistics/log/general.js');
 	module.exports = {CaseFeatures: CaseFeatures};
-	global.CaseFeatures = CaseFeatures;
+	globalThis.CaseFeatures = CaseFeatures;
 }
 catch (err) {
 	// not in node

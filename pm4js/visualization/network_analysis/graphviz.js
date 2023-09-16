@@ -57,7 +57,8 @@ class NetworkAnalysisGraphvizVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {NetworkAnalysisGraphvizVisualizer: NetworkAnalysisGraphvizVisualizer};
-	global.NetworkAnalysisGraphvizVisualizer = NetworkAnalysisGraphvizVisualizer;
+	globalThis.NetworkAnalysisGraphvizVisualizer =
+    NetworkAnalysisGraphvizVisualizer;
 }
 catch (err) {
 	// not in node

@@ -159,7 +159,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../petri_net/util/reduction.js');
 	module.exports = {BpmnToPetriNetConverter: BpmnToPetriNetConverter};
-	global.BpmnToPetriNetConverter = BpmnToPetriNetConverter;
+	globalThis.BpmnToPetriNetConverter = BpmnToPetriNetConverter;
 }
 catch (err) {
 	//console.log(err);

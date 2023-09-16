@@ -73,7 +73,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/frequency/obj.js');
 	module.exports = {AlignmentsDfgGraphvizVisualizer: AlignmentsDfgGraphvizVisualizer};
-	global.AlignmentsDfgGraphvizVisualizer = AlignmentsDfgGraphvizVisualizer;
+	globalThis.AlignmentsDfgGraphvizVisualizer = AlignmentsDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node

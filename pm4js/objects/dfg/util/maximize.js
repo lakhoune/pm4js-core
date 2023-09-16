@@ -106,7 +106,7 @@ class FilteredDfgMaximization {
 try {
 	require("../../../pm4js.js");
 	module.exports = {FilteredDfgMaximization: FilteredDfgMaximization};
-	global.FilteredDfgMaximization = FilteredDfgMaximization;
+	globalThis.FilteredDfgMaximization = FilteredDfgMaximization;
 }
 catch (err) {
 	// not in Node

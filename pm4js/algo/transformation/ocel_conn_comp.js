@@ -38,7 +38,7 @@ class OcelConnectedComponents {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelConnectedComponents: OcelConnectedComponents};
-	global.OcelConnectedComponents = OcelConnectedComponents;
+	globalThis.OcelConnectedComponents = OcelConnectedComponents;
 }
 catch (err) {
 	// not in node

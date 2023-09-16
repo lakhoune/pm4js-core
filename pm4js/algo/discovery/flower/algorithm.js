@@ -21,7 +21,7 @@ try {
 	require('../../../objects/process_tree/process_tree.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {FlowerMiner: FlowerMiner};
-	global.FlowerMiner = FlowerMiner;
+	globalThis.FlowerMiner = FlowerMiner;
 }
 catch (err) {
 	// not in Node

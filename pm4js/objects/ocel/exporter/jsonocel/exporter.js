@@ -12,7 +12,7 @@ class JsonOcelExporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {JsonOcelExporter: JsonOcelExporter};
-	global.JsonOcelExporter = JsonOcelExporter;
+	globalThis.JsonOcelExporter = JsonOcelExporter;
 }
 catch (err) {
 	// not in node

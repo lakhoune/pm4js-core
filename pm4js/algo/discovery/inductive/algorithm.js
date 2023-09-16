@@ -1262,8 +1262,9 @@ try {
 	require('../../../algo/discovery/dfg/algorithm.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {InductiveMiner: InductiveMiner, InductiveMinerSequenceCutDetector: InductiveMinerSequenceCutDetector};
-	global.InductiveMiner = InductiveMiner;
-	global.InductiveMinerSequenceCutDetector = InductiveMinerSequenceCutDetector;
+	globalThis.InductiveMiner = InductiveMiner;
+  globalThis.InductiveMinerSequenceCutDetector =
+    InductiveMinerSequenceCutDetector;
 }
 catch (err) {
 	// not in Node

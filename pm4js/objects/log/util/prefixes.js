@@ -27,7 +27,7 @@ try {
 	require('../../../pm4js.js');
 	require('../log.js');
 	module.exports = {EventLogPrefixes: EventLogPrefixes};
-	global.EventLogPrefixes = EventLogPrefixes;
+	globalThis.EventLogPrefixes = EventLogPrefixes;
 }
 catch (err) {
 	// not in node

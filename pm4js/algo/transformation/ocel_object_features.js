@@ -419,7 +419,7 @@ class OcelObjectFeatures {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelObjectFeatures: OcelObjectFeatures};
-	global.OcelObjectFeatures = OcelObjectFeatures;
+	globalThis.OcelObjectFeatures = OcelObjectFeatures;
 }
 catch (err) {
 	// not in node

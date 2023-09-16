@@ -731,7 +731,7 @@ class OcelGeneralFiltering {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelGeneralFiltering: OcelGeneralFiltering};
-	global.OcelGeneralFiltering = OcelGeneralFiltering;
+	globalThis.OcelGeneralFiltering = OcelGeneralFiltering;
 }
 catch (err) {
 	// not in Node

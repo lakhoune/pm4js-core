@@ -237,8 +237,8 @@ try {
 	require('../heapq.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {PetriNetAlignments: PetriNetAlignments, PetriNetAlignmentsResults: PetriNetAlignmentsResults};
-	global.PetriNetAlignments = PetriNetAlignments;
-	global.PetriNetAlignmentsResults = PetriNetAlignmentsResults;
+	globalThis.PetriNetAlignments = PetriNetAlignments;
+  globalThis.PetriNetAlignmentsResults = PetriNetAlignmentsResults;
 }
 catch (err) {
 	// not in Node

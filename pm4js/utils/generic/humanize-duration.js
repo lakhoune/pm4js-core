@@ -1699,7 +1699,7 @@
     });
   } else if (typeof module !== "undefined" && module.exports) {
     module.exports = humanizeDuration;
-	global.humanizeDuration = humanizeDuration;
+	globalThis.humanizeDuration = humanizeDuration;
   } else {
     this.humanizeDuration = humanizeDuration;
   }

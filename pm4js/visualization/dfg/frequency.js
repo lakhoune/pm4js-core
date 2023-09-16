@@ -50,7 +50,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/frequency/obj.js');
 	module.exports = {FrequencyDfgGraphvizVisualizer: FrequencyDfgGraphvizVisualizer};
-	global.FrequencyDfgGraphvizVisualizer = FrequencyDfgGraphvizVisualizer;
+	globalThis.FrequencyDfgGraphvizVisualizer = FrequencyDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node

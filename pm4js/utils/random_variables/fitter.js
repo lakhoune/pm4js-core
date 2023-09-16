@@ -92,7 +92,7 @@ class RandomVariableFitter {
 
 try {
 	require('../../pm4js.js');
-	global.RandomVariableFitter = RandomVariableFitter;
+	globalThis.RandomVariableFitter = RandomVariableFitter;
 	module.exports = {RandomVariableFitter: RandomVariableFitter};
 }
 catch (err) {

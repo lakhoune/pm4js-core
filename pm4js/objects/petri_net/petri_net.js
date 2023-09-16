@@ -254,12 +254,12 @@ class AcceptingPetriNet {
 try {
 	require('../../pm4js.js');
 	module.exports = {PetriNet: PetriNet, PetriNetPlace: PetriNetPlace, PetriNetTransition: PetriNetTransition, PetriNetArc: PetriNetArc, Marking: Marking, AcceptingPetriNet: AcceptingPetriNet};
-	global.PetriNet = PetriNet;
-	global.PetriNetPlace = PetriNetPlace;
-	global.PetriNetTransition = PetriNetTransition;
-	global.PetriNetArc = PetriNetArc;
-	global.Marking = Marking;
-	global.AcceptingPetriNet = AcceptingPetriNet;
+	globalThis.PetriNet = PetriNet;
+  globalThis.PetriNetPlace = PetriNetPlace;
+  globalThis.PetriNetTransition = PetriNetTransition;
+  globalThis.PetriNetArc = PetriNetArc;
+  globalThis.Marking = Marking;
+  globalThis.AcceptingPetriNet = AcceptingPetriNet;
 }
 catch (err) {
 	// not in node

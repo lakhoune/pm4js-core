@@ -347,7 +347,7 @@ class GeneralLogStatistics {
 try {
 	require('../../pm4js.js');
 	module.exports = {GeneralLogStatistics: GeneralLogStatistics};
-	global.GeneralLogStatistics = GeneralLogStatistics;
+	globalThis.GeneralLogStatistics = GeneralLogStatistics;
 }
 catch (err) {
 	// not in node

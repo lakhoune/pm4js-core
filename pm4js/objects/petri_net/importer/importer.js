@@ -130,8 +130,8 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PnmlImporter: PnmlImporter};
-	global.PnmlImporter = PnmlImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.PnmlImporter = PnmlImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node

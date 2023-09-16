@@ -83,7 +83,7 @@ try {
 	require('../../log.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {CsvExporter: CsvExporter};
-	global.CsvExporter = CsvExporter;
+	globalThis.CsvExporter = CsvExporter;
 }
 catch (err) {
 	// not in node

@@ -330,7 +330,7 @@ class Celonis1DWrapper {
 
 try {
 	require('../../pm4js.js');
-	global.Celonis1DWrapper = Celonis1DWrapper;
+	globalThis.Celonis1DWrapper = Celonis1DWrapper;
 	module.exports = {Celonis1DWrapper: Celonis1DWrapper};
 }
 catch (err) {

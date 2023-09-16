@@ -60,8 +60,8 @@ try {
 	require('../../../../pm4js.js');
 	require('../../log.js');
 	module.exports = {XesImporter: XesImporter};
-	global.XesImporter = XesImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.XesImporter = XesImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in node

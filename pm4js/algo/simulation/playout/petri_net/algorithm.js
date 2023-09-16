@@ -34,7 +34,7 @@ class PetriNetPlayout {
 
 try {
 	require('../../../../pm4js.js');
-	global.PetriNetPlayout = PetriNetPlayout;
+	globalThis.PetriNetPlayout = PetriNetPlayout;
 	module.exports = {PetriNetPlayout: PetriNetPlayout};
 }
 catch (err) {

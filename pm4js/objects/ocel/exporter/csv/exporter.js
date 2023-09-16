@@ -55,7 +55,7 @@ CsvOcelExporter.DEFAULT_NEWLINE = '\n';
 try {
 	require('../../../../pm4js.js');
 	module.exports = {CsvOcelExporter: CsvOcelExporter};
-	global.CsvOcelExporter = CsvOcelExporter;
+	globalThis.CsvOcelExporter = CsvOcelExporter;
 }
 catch (err) {
 	// not in node

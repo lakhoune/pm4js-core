@@ -114,7 +114,7 @@ class OcelToCelonis {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelToCelonis: OcelToCelonis};
-	global.OcelToCelonis = OcelToCelonis;
+	globalThis.OcelToCelonis = OcelToCelonis;
 }
 catch (err) {
 	// not in node

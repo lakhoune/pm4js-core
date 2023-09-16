@@ -40,7 +40,7 @@ BusinessHours.ENABLED = false;
 
 try {
 	require('../../pm4js.js');
-	global.BusinessHours = BusinessHours;
+	globalThis.BusinessHours = BusinessHours;
 	module.exports = {BusinessHours: BusinessHours};
 }
 catch (err) {

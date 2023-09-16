@@ -61,8 +61,8 @@ try {
 	require("../../../../objects/petri_net/util/reachable_visible_transitions.js");
 	require("../../../../statistics/log/general.js");
 	module.exports = {ETConformance: ETConformance, ETConformanceResult: ETConformanceResult};
-	global.ETConformance = ETConformance;
-	global.ETConformanceResult = ETConformanceResult;
+	globalThis.ETConformance = ETConformance;
+  globalThis.ETConformanceResult = ETConformanceResult;
 }
 catch (err) {
 	// not in Node

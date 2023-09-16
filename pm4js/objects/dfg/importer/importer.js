@@ -55,7 +55,7 @@ class FrequencyDfgImporter {
 
 try {
 	require('../../../pm4js.js');
-	global.FrequencyDfgImporter = FrequencyDfgImporter;
+	globalThis.FrequencyDfgImporter = FrequencyDfgImporter;
 	module.exports = {FrequencyDfgImporter: FrequencyDfgImporter};
 }
 catch (err) {

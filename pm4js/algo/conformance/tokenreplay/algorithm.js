@@ -516,7 +516,7 @@ class TokenBasedReplay {
 try {
 	require('../../../pm4js.js');
 	module.exports = {TokenBasedReplay: TokenBasedReplay};
-	global.TokenBasedReplay = TokenBasedReplay
+	globalThis.TokenBasedReplay = TokenBasedReplay;
 }
 catch (err) {
 	// not in Node

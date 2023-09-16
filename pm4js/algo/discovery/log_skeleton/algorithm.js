@@ -131,7 +131,7 @@ try {
 	require('../../../objects/skeleton/log_skeleton.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {LogSkeletonDiscovery: LogSkeletonDiscovery};
-	global.LogSkeletonDiscovery = LogSkeletonDiscovery;
+	globalThis.LogSkeletonDiscovery = LogSkeletonDiscovery;
 }
 catch (err) {
 	// not in Node

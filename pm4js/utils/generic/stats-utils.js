@@ -51,7 +51,7 @@ class StatisticsUtils {
 try {
 	require('../../pm4js.js');
 	module.exports = {StatisticsUtils: StatisticsUtils};
-	global.StatisticsUtils = StatisticsUtils;
+	globalThis.StatisticsUtils = StatisticsUtils;
 }
 catch (err) {
 	// not in node

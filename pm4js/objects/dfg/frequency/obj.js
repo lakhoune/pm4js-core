@@ -53,7 +53,7 @@ class FrequencyDfg {
 try {
 	require("../../../pm4js.js");
 	module.exports = {FrequencyDfg: FrequencyDfg};
-	global.FrequencyDfg = FrequencyDfg;
+	globalThis.FrequencyDfg = FrequencyDfg;
 }
 catch (err) {
 	// not in Node

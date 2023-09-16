@@ -128,7 +128,7 @@ class DtUtils {
 try {
 	require('../../pm4js.js');
 	module.exports = {DtUtils: DtUtils};
-	global.DtUtils = DtUtils;
+	globalThis.DtUtils = DtUtils;
 }
 catch (err) {
 	// not in node

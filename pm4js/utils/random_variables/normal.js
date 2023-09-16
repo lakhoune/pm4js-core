@@ -106,7 +106,7 @@ NormalRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.NormalRandomVariable = NormalRandomVariable;
+	globalThis.NormalRandomVariable = NormalRandomVariable;
 	module.exports = {NormalRandomVariable: NormalRandomVariable};
 }
 catch (err) {

@@ -39,8 +39,8 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../../objects/petri_net/petri_net.js");
 	module.exports = {SimplicityArcDegree: SimplicityArcDegree, SimplicityArcDegreeResults: SimplicityArcDegreeResults};
-	global.SimplicityArcDegree = SimplicityArcDegree;
-	global.SimplicityArcDegreeResults = SimplicityArcDegreeResults;
+	globalThis.SimplicityArcDegree = SimplicityArcDegree;
+  globalThis.SimplicityArcDegreeResults = SimplicityArcDegreeResults;
 }
 catch (err) {
 	// not in Node

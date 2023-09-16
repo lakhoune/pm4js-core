@@ -76,7 +76,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/process_tree/process_tree.js');
 	module.exports = {ProcessTreeVanillaVisualizer: ProcessTreeVanillaVisualizer};
-	global.ProcessTreeVanillaVisualizer = ProcessTreeVanillaVisualizer;
+	globalThis.ProcessTreeVanillaVisualizer = ProcessTreeVanillaVisualizer;
 }
 catch (err) {
 	// not in node

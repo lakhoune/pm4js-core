@@ -38,11 +38,11 @@ class Attribute {
 try {
 	require('../../pm4js.js');
 	module.exports = {EventLog: EventLog, Trace: Trace, Event: Event, LogGlobal: LogGlobal, Attribute: Attribute};
-	global.EventLog = EventLog;
-	global.Trace = Trace;
-	global.Event = Event;
-	global.LogGlobal = LogGlobal;
-	global.Attribute = Attribute;
+	globalThis.EventLog = EventLog;
+  globalThis.Trace = Trace;
+  globalThis.Event = Event;
+  globalThis.LogGlobal = LogGlobal;
+  globalThis.Attribute = Attribute;
 }
 catch (err) {
 	// not in node

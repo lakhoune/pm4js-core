@@ -58,7 +58,7 @@ class LogSkeleton {
 try {
 	require('../../pm4js.js');
 	module.exports = { LogSkeleton: LogSkeleton };
-	global.LogSkeleton = LogSkeleton;
+	globalThis.LogSkeleton = LogSkeleton;
 }
 catch (err) {
 	// not in Node

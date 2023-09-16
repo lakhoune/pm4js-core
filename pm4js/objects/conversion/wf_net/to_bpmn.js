@@ -123,7 +123,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../bpmn/bpmn_graph.js');
 	module.exports = {WfNetToBpmnConverter: WfNetToBpmnConverter};
-	global.WfNetToBpmnConverter = WfNetToBpmnConverter;
+	globalThis.WfNetToBpmnConverter = WfNetToBpmnConverter;
 }
 catch (err) {
 	//console.log(err);

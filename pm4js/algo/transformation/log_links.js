@@ -130,7 +130,7 @@ class LogLinksAnalysis {
 try {
 	require('../../pm4js.js');
 	module.exports = {LogLinksAnalysis: LogLinksAnalysis};
-	global.LogLinksAnalysis = LogLinksAnalysis;
+	globalThis.LogLinksAnalysis = LogLinksAnalysis;
 }
 catch (err) {
 	// not in node

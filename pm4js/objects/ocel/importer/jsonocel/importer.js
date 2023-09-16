@@ -15,7 +15,7 @@ class JsonOcelImporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {JsonOcelImporter: JsonOcelImporter};
-	global.JsonOcelImporter = JsonOcelImporter;
+	globalThis.JsonOcelImporter = JsonOcelImporter;
 }
 catch (err) {
 	// not in node

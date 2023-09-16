@@ -93,14 +93,14 @@ PtmlExporter.DUMMY_SEP = "AIOEWFRIUOERWQIO";
 
 try {
 	require('../../../pm4js.js');
-	global.PtmlExporter = PtmlExporter;
+	globalThis.PtmlExporter = PtmlExporter;
 	module.exports = {PtmlExporter: PtmlExporter};
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node

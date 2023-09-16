@@ -90,7 +90,7 @@ class PetriNetFrequencyVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {PetriNetFrequencyVisualizer: PetriNetFrequencyVisualizer};
-	global.PetriNetFrequencyVisualizer = PetriNetFrequencyVisualizer;
+	globalThis.PetriNetFrequencyVisualizer = PetriNetFrequencyVisualizer;
 }
 catch (err) {
 	// not in node

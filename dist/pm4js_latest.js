@@ -126,8 +126,8 @@ Pm4JS.latestIssuedUuid = "";
 
 try {
 	module.exports = {Pm4JS: Pm4JS, Pm4JSObserverExample: Pm4JSObserverExample};
-	global.Pm4JS = Pm4JS;
-	global.Pm4JSObserverExample = Pm4JSObserverExample;
+	globalThis.Pm4JS = Pm4JS;
+  globalThis.Pm4JSObserverExample = Pm4JSObserverExample;
 }
 catch (err) {
 	// not in node
@@ -142,7 +142,7 @@ class DateUtils {
 try {
 	require('../../pm4js.js');
 	module.exports = {DateUtils: DateUtils};
-	global.DateUtils = DateUtils;
+	globalThis.DateUtils = DateUtils;
 }
 catch (err) {
 	// not in node
@@ -161,7 +161,7 @@ catch (err) {
   // See https://github.com/EvanHahn/HumanizeDuration.js/issues/143 for more.
   var greek = {
     y: function (c) {
-      return c === 1 ? "χ�όνος" : "χ�όνια";
+      return c === 1 ? "χ�όνος" : "χ�όνια";
     },
     mo: function (c) {
       return c === 1 ? "μήνας" : "μήνες";
@@ -170,21 +170,21 @@ catch (err) {
       return c === 1 ? "εβδομάδα" : "εβδομάδες";
     },
     d: function (c) {
-      return c === 1 ? "μέ�α" : "μέ�ες";
+      return c === 1 ? "μέ�α" : "μέ�ες";
     },
     h: function (c) {
-      return c === 1 ? "ώ�α" : "ώ�ες";
+      return c === 1 ? "ώ�α" : "ώ�ες";
     },
     m: function (c) {
       return c === 1 ? "λεπτό" : "λεπτά";
     },
     s: function (c) {
-      return c === 1 ? "δευτε�όλεπτο" : "δευτε�όλεπτα";
+      return c === 1 ? "δευτε�όλεπτο" : "δευτε�όλεπτα";
     },
     ms: function (c) {
       return c === 1
-        ? "χιλιοστό του δευτε�ολέπτου"
-        : "χιλιοστά του δευτε�ολέπτου";
+        ? "χιλιοστό του δευτε�ολέπτου"
+        : "χιλιοστά του δευτε�ολέπτου";
     },
     decimal: ","
   };
@@ -263,37 +263,37 @@ catch (err) {
         return ["години", "година", "години"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме�еца", "ме�ец", "ме�еца"][getSlavicForm(c)];
+        return ["ме�еца", "ме�ец", "ме�еца"][getSlavicForm(c)];
       },
       w: function (c) {
-        return ["�едмици", "�едмица", "�едмици"][getSlavicForm(c)];
+        return ["�едмици", "�едмица", "�едмици"][getSlavicForm(c)];
       },
       d: function (c) {
         return ["дни", "ден", "дни"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["ча�а", "ча�", "ча�а"][getSlavicForm(c)];
+        return ["ча�а", "ча�", "ча�а"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минути", "минута", "минути"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунди", "�екунда", "�екунди"][getSlavicForm(c)];
+        return ["�екунди", "�екунда", "�екунди"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мили�екунди", "мили�екунда", "мили�екунди"][getSlavicForm(c)];
+        return ["мили�екунди", "мили�екунда", "мили�екунди"][getSlavicForm(c)];
       },
       decimal: ","
     },
     bn: {
       y: "বছর",
       mo: "মাস",
-      w: "সপ�তাহ",
+      w: "সপ�তাহ",
       d: "দিন",
-      h: "ঘন�টা",
+      h: "ঘন�টা",
       m: "মিনিট",
-      s: "সেকেন�ড",
-      ms: "মিলিসেকেন�ড"
+      s: "সেকেন�ড",
+      ms: "মিলিসেকেন�ড"
     },
     ca: {
       y: function (c) {
@@ -538,7 +538,7 @@ catch (err) {
     fa: {
       y: "سال",
       mo: "ماه",
-      w: "ه�ته",
+      w: "ه�ته",
       d: "روز",
       h: "ساعت",
       m: "دقیقه",
@@ -622,16 +622,16 @@ catch (err) {
     gr: greek,
     he: {
       y: function (c) {
-        return c === 1 ? "שנה" : "שני�";
+        return c === 1 ? "שנה" : "שני�";
       },
       mo: function (c) {
-        return c === 1 ? "חודש" : "חודשי�";
+        return c === 1 ? "חודש" : "חודשי�";
       },
       w: function (c) {
         return c === 1 ? "שבוע" : "שבועות";
       },
       d: function (c) {
-        return c === 1 ? "יו�" : "ימי�";
+        return c === 1 ? "יו�" : "ימי�";
       },
       h: function (c) {
         return c === 1 ? "שעה" : "שעות";
@@ -713,7 +713,7 @@ catch (err) {
         return c === 1 ? "महीना" : "महीने";
       },
       w: function (c) {
-        return c === 1 ? "हफ़�ता" : "हफ�ते";
+        return c === 1 ? "हफ़�ता" : "हफ�ते";
       },
       d: "दिन",
       h: function (c) {
@@ -811,9 +811,9 @@ catch (err) {
     },
     km: {
       y: "ឆ្នាំ",
-      mo: "�ែ",
-      w: "សប្�ាហ�",
-      d: "�្ងៃ",
+      mo: "�ែ",
+      w: "សប្�ាហ�",
+      d: "�្ងៃ",
       h: "ម៉ោង",
       m: "នាទី",
       s: "វិនាទី",
@@ -821,35 +821,35 @@ catch (err) {
     },
     kn: {
       y: function (c) {
-        return c === 1 ? "ವರ�ಷ" : "ವರ�ಷಗಳ�";
+        return c === 1 ? "ವರ�ಷ" : "ವರ�ಷಗಳ�";
       },
       mo: function (c) {
-        return c === 1 ? "ತಿಂಗಳ�" : "ತಿಂಗಳ�ಗಳ�";
+        return c === 1 ? "ತಿಂಗಳ�" : "ತಿಂಗಳ�ಗಳ�";
       },
       w: function (c) {
-        return c === 1 ? "ವಾರ" : "ವಾರಗಳ�";
+        return c === 1 ? "ವಾರ" : "ವಾರಗಳ�";
       },
       d: function (c) {
-        return c === 1 ? "ದಿನ" : "ದಿನಗಳ�";
+        return c === 1 ? "ದಿನ" : "ದಿನಗಳ�";
       },
       h: function (c) {
-        return c === 1 ? "ಗಂಟೆ" : "ಗಂಟೆಗಳ�";
+        return c === 1 ? "ಗಂಟೆ" : "ಗಂಟೆಗಳ�";
       },
       m: function (c) {
-        return c === 1 ? "ನಿಮಿಷ" : "ನಿಮಿಷಗಳ�";
+        return c === 1 ? "ನಿಮಿಷ" : "ನಿಮಿಷಗಳ�";
       },
       s: function (c) {
-        return c === 1 ? "ಸೆಕೆಂಡ�" : "ಸೆಕೆಂಡ�ಗಳ�";
+        return c === 1 ? "ಸೆಕೆಂಡ�" : "ಸೆಕೆಂಡ�ಗಳ�";
       },
       ms: function (c) {
-        return c === 1 ? "ಮಿಲಿಸೆಕೆಂಡ�" : "ಮಿಲಿಸೆಕೆಂಡ�ಗಳ�";
+        return c === 1 ? "ಮಿಲಿಸೆಕೆಂಡ�" : "ಮಿಲಿಸೆಕೆಂಡ�ಗಳ�";
       }
     },
     ko: {
       y: "년",
       mo: "개월",
-      w: "주�",
-      d: "�",
+      w: "주�",
+      d: "�",
       h: "시간",
       m: "분",
       s: "초",
@@ -888,7 +888,7 @@ catch (err) {
         return ["mėnuo", "mėnesiai", "mėnesių"][getLithuanianForm(c)];
       },
       w: function (c) {
-        return ["savaitė", "savaitės", "savai�ių"][getLithuanianForm(c)];
+        return ["savaitė", "savaitės", "savai�ių"][getLithuanianForm(c)];
       },
       d: function (c) {
         return ["diena", "dienos", "dienų"][getLithuanianForm(c)];
@@ -897,7 +897,7 @@ catch (err) {
         return ["valanda", "valandos", "valandų"][getLithuanianForm(c)];
       },
       m: function (c) {
-        return ["minutė", "minutės", "minu�ių"][getLithuanianForm(c)];
+        return ["minutė", "minutės", "minu�ių"][getLithuanianForm(c)];
       },
       s: function (c) {
         return ["sekundė", "sekundės", "sekundžių"][getLithuanianForm(c)];
@@ -941,7 +941,7 @@ catch (err) {
         return c === 1 ? "година" : "години";
       },
       mo: function (c) {
-        return c === 1 ? "ме�ец" : "ме�еци";
+        return c === 1 ? "ме�ец" : "ме�еци";
       },
       w: function (c) {
         return c === 1 ? "недела" : "недели";
@@ -950,22 +950,22 @@ catch (err) {
         return c === 1 ? "ден" : "дена";
       },
       h: function (c) {
-        return c === 1 ? "ча�" : "ча�а";
+        return c === 1 ? "ча�" : "ча�а";
       },
       m: function (c) {
         return c === 1 ? "минута" : "минути";
       },
       s: function (c) {
-        return c === 1 ? "�екунда" : "�екунди";
+        return c === 1 ? "�екунда" : "�екунди";
       },
       ms: function (c) {
-        return c === 1 ? "мили�екунда" : "мили�екунди";
+        return c === 1 ? "мили�екунда" : "мили�екунди";
       },
       decimal: ","
     },
     mr: {
       y: function (c) {
-        return c === 1 ? "वर�ष" : "वर�षे";
+        return c === 1 ? "वर�ष" : "वर�षे";
       },
       mo: function (c) {
         return c === 1 ? "महिना" : "महिने";
@@ -1130,25 +1130,25 @@ catch (err) {
         return ["лет", "год", "года"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме��цев", "ме��ц", "ме��ца"][getSlavicForm(c)];
+        return ["ме��цев", "ме��ц", "ме��ца"][getSlavicForm(c)];
       },
       w: function (c) {
-        return ["недель", "недел�", "недели"][getSlavicForm(c)];
+        return ["недель", "недел�", "недели"][getSlavicForm(c)];
       },
       d: function (c) {
-        return ["дней", "день", "дн�"][getSlavicForm(c)];
+        return ["дней", "день", "дн�"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["ча�ов", "ча�", "ча�а"][getSlavicForm(c)];
+        return ["ча�ов", "ча�", "ча�а"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минут", "минута", "минуты"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунд", "�екунда", "�екунды"][getSlavicForm(c)];
+        return ["�екунд", "�екунда", "�екунды"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["милли�екунд", "милли�екунда", "милли�екунды"][
+        return ["милли�екунд", "милли�екунда", "милли�екунды"][
           getSlavicForm(c)
         ];
       },
@@ -1178,7 +1178,7 @@ catch (err) {
         return ["години", "година", "године"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме�еци", "ме�ец", "ме�еца"][getSlavicForm(c)];
+        return ["ме�еци", "ме�ец", "ме�еца"][getSlavicForm(c)];
       },
       w: function (c) {
         return ["недељи", "недеља", "недеље"][getSlavicForm(c)];
@@ -1187,69 +1187,69 @@ catch (err) {
         return ["дани", "дан", "дана"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["�ати", "�ат", "�ата"][getSlavicForm(c)];
+        return ["�ати", "�ат", "�ата"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минута", "минут", "минута"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунди", "�екунда", "�екунде"][getSlavicForm(c)];
+        return ["�екунди", "�екунда", "�екунде"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мили�екунди", "мили�екунда", "мили�екунде"][getSlavicForm(c)];
+        return ["мили�екунди", "мили�екунда", "мили�екунде"][getSlavicForm(c)];
       },
       decimal: ","
     },
     ta: {
       y: function (c) {
-        return c === 1 ? "வர�டம�" : "ஆண�ட�கள�";
+        return c === 1 ? "வர�டம�" : "ஆண�ட�கள�";
       },
       mo: function (c) {
-        return c === 1 ? "மாதம�" : "மாதங�கள�";
+        return c === 1 ? "மாதம�" : "மாதங�கள�";
       },
       w: function (c) {
-        return c === 1 ? "வாரம�" : "வாரங�கள�";
+        return c === 1 ? "வாரம�" : "வாரங�கள�";
       },
       d: function (c) {
-        return c === 1 ? "நாள�" : "நாட�கள�";
+        return c === 1 ? "நாள�" : "நாட�கள�";
       },
       h: function (c) {
-        return c === 1 ? "மணி" : "மணிநேரம�";
+        return c === 1 ? "மணி" : "மணிநேரம�";
       },
       m: function (c) {
-        return "நிமிட" + (c === 1 ? "ம�" : "ங�கள�");
+        return "நிமிட" + (c === 1 ? "ம�" : "ங�கள�");
       },
       s: function (c) {
-        return "வினாடி" + (c === 1 ? "" : "கள�");
+        return "வினாடி" + (c === 1 ? "" : "கள�");
       },
       ms: function (c) {
-        return "மில�லி விநாடி" + (c === 1 ? "" : "கள�");
+        return "மில�லி விநாடி" + (c === 1 ? "" : "கள�");
       }
     },
     te: {
       y: function (c) {
-        return "సంవత�స" + (c === 1 ? "రం" : "రాల");
+        return "సంవత�స" + (c === 1 ? "రం" : "రాల");
       },
       mo: function (c) {
         return "నెల" + (c === 1 ? "" : "ల");
       },
       w: function (c) {
-        return c === 1 ? "వారం" : "వారాల�";
+        return c === 1 ? "వారం" : "వారాల�";
       },
       d: function (c) {
-        return "రోజ�" + (c === 1 ? "" : "ల�");
+        return "రోజ�" + (c === 1 ? "" : "ల�");
       },
       h: function (c) {
-        return "గంట" + (c === 1 ? "" : "ల�");
+        return "గంట" + (c === 1 ? "" : "ల�");
       },
       m: function (c) {
-        return c === 1 ? "నిమిషం" : "నిమిషాల�";
+        return c === 1 ? "నిమిషం" : "నిమిషాల�";
       },
       s: function (c) {
-        return c === 1 ? "సెకన�" : "సెకన�ల�";
+        return c === 1 ? "సెకన�" : "సెకన�ల�";
       },
       ms: function (c) {
-        return c === 1 ? "మిల�లీసెకన�" : "మిల�లీసెకన�ల�";
+        return c === 1 ? "మిల�లీసెకన�" : "మిల�లీసెకన�ల�";
       }
     },
     uk: {
@@ -1257,7 +1257,7 @@ catch (err) {
         return ["років", "рік", "роки"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["мі��ців", "мі��ць", "мі��ці"][getSlavicForm(c)];
+        return ["мі��ців", "мі��ць", "мі��ці"][getSlavicForm(c)];
       },
       w: function (c) {
         return ["тижнів", "тиждень", "тижні"][getSlavicForm(c)];
@@ -1272,24 +1272,24 @@ catch (err) {
         return ["хвилин", "хвилина", "хвилини"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунд", "�екунда", "�екунди"][getSlavicForm(c)];
+        return ["�екунд", "�екунда", "�екунди"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мілі�екунд", "мілі�екунда", "мілі�екунди"][getSlavicForm(c)];
+        return ["мілі�екунд", "мілі�екунда", "мілі�екунди"][getSlavicForm(c)];
       },
       decimal: ","
     },
     ur: {
       y: "سال",
       mo: function (c) {
-        return c === 1 ? "م�ین�" : "م�ینے";
+        return c === 1 ? "م�ین�" : "م�ینے";
       },
       w: function (c) {
-        return c === 1 ? "��ت�" : "��تے";
+        return c === 1 ? "��ت�" : "��تے";
       },
       d: "دن",
       h: function (c) {
-        return c === 1 ? "گھنٹ�" : "گھنٹے";
+        return c === 1 ? "گھنٹ�" : "گھنٹے";
       },
       m: "منٹ",
       s: "سیکنڈ",
@@ -1493,7 +1493,7 @@ catch (err) {
       mo: "tháng",
       w: "tuần",
       d: "ngày",
-      h: "gi�",
+      h: "gi�",
       m: "phút",
       s: "giây",
       ms: "mili giây",
@@ -1504,7 +1504,7 @@ catch (err) {
       mo: "个月",
       w: "周",
       d: "天",
-      h: "�时",
+      h: "�时",
       m: "分钟",
       s: "秒",
       ms: "毫秒",
@@ -1515,8 +1515,8 @@ catch (err) {
       mo: "個月",
       w: "周",
       d: "天",
-      h: "�時",
-      m: "分�",
+      h: "�時",
+      m: "分�",
       s: "秒",
       ms: "毫秒",
       decimal: "."
@@ -1851,7 +1851,7 @@ catch (err) {
     });
   } else if (typeof module !== "undefined" && module.exports) {
     module.exports = humanizeDuration;
-	global.humanizeDuration = humanizeDuration;
+	globalThis.humanizeDuration = humanizeDuration;
   } else {
     this.humanizeDuration = humanizeDuration;
   }
@@ -3202,10 +3202,10 @@ IntervalTreeNode.IntervalComparator = IntervalComparator;
 
 try {
 	module.exports = {IntervalTree: IntervalTree, IntervalTreeNode: IntervalTreeNode, Interval: Interval, SortedArray: SortedArray};
-	global.IntervalTree = IntervalTree;
-	global.IntervalTreeNode = IntervalTreeNode;
-	global.Interval = Interval;
-	global.SortedArray = SortedArray;
+	globalThis.IntervalTree = IntervalTree;
+  globalThis.IntervalTreeNode = IntervalTreeNode;
+  globalThis.Interval = Interval;
+  globalThis.SortedArray = SortedArray;
 }
 catch (err) {
 	// not in Node.JS
@@ -3216,7 +3216,9 @@ catch (err) {
 "use strict";
 
 var numeric = (typeof exports === "undefined")?(function numeric() {}):(exports);
-if(typeof global !== "undefined") { global.numeric = numeric; }
+if (typeof global !== "undefined") {
+  globalThis.numeric = numeric;
+}
 
 numeric.version = "1.2.6";
 
@@ -7681,7 +7683,7 @@ BusinessHours.ENABLED = false;
 
 try {
 	require('../../pm4js.js');
-	global.BusinessHours = BusinessHours;
+	globalThis.BusinessHours = BusinessHours;
 	module.exports = {BusinessHours: BusinessHours};
 }
 catch (err) {
@@ -7730,11 +7732,11 @@ class Attribute {
 try {
 	require('../../pm4js.js');
 	module.exports = {EventLog: EventLog, Trace: Trace, Event: Event, LogGlobal: LogGlobal, Attribute: Attribute};
-	global.EventLog = EventLog;
-	global.Trace = Trace;
-	global.Event = Event;
-	global.LogGlobal = LogGlobal;
-	global.Attribute = Attribute;
+	globalThis.EventLog = EventLog;
+  globalThis.Trace = Trace;
+  globalThis.Event = Event;
+  globalThis.LogGlobal = LogGlobal;
+  globalThis.Attribute = Attribute;
 }
 catch (err) {
 	// not in node
@@ -8089,7 +8091,7 @@ class GeneralLogStatistics {
 try {
 	require('../../pm4js.js');
 	module.exports = {GeneralLogStatistics: GeneralLogStatistics};
-	global.GeneralLogStatistics = GeneralLogStatistics;
+	globalThis.GeneralLogStatistics = GeneralLogStatistics;
 }
 catch (err) {
 	// not in node
@@ -8159,8 +8161,8 @@ try {
 	require('../../../../pm4js.js');
 	require('../../log.js');
 	module.exports = {XesImporter: XesImporter};
-	global.XesImporter = XesImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.XesImporter = XesImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in node
@@ -8251,7 +8253,7 @@ try {
 	require('../../../../pm4js.js');
 	require('../../log.js');
 	module.exports = {CsvImporter: CsvImporter};
-	global.CsvImporter = CsvImporter;
+	globalThis.CsvImporter = CsvImporter;
 }
 catch (err) {
 	// not in node
@@ -8345,7 +8347,7 @@ try {
 	require('../../log.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {CsvExporter: CsvExporter};
-	global.CsvExporter = CsvExporter;
+	globalThis.CsvExporter = CsvExporter;
 }
 catch (err) {
 	// not in node
@@ -8409,7 +8411,7 @@ class XesExporter {
 				let global = obj.globals[scope];
 				let xmlGlobal = document.createElement("global");
 				dom.appendChild(xmlGlobal);
-				xmlGlobal.setAttribute("scope", scope);
+				xmlglobalThis.setAttribute("scope", scope);
 				XesExporter.exportXmlObjToDom(global, xmlGlobal);
 			}
 			for (let classifier in obj.classifiers) {
@@ -8438,13 +8440,13 @@ try {
 	require('../../../../pm4js.js');
 	require('../../log.js');
 	module.exports = {XesExporter: XesExporter};
-	global.XesExporter = XesExporter;
+	globalThis.XesExporter = XesExporter;
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -8709,12 +8711,12 @@ class AcceptingPetriNet {
 try {
 	require('../../pm4js.js');
 	module.exports = {PetriNet: PetriNet, PetriNetPlace: PetriNetPlace, PetriNetTransition: PetriNetTransition, PetriNetArc: PetriNetArc, Marking: Marking, AcceptingPetriNet: AcceptingPetriNet};
-	global.PetriNet = PetriNet;
-	global.PetriNetPlace = PetriNetPlace;
-	global.PetriNetTransition = PetriNetTransition;
-	global.PetriNetArc = PetriNetArc;
-	global.Marking = Marking;
-	global.AcceptingPetriNet = AcceptingPetriNet;
+	globalThis.PetriNet = PetriNet;
+  globalThis.PetriNetPlace = PetriNetPlace;
+  globalThis.PetriNetTransition = PetriNetTransition;
+  globalThis.PetriNetArc = PetriNetArc;
+  globalThis.Marking = Marking;
+  globalThis.AcceptingPetriNet = AcceptingPetriNet;
 }
 catch (err) {
 	// not in node
@@ -8813,7 +8815,7 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PetriNetReduction: PetriNetReduction};
-	global.PetriNetReduction = PetriNetReduction;
+	globalThis.PetriNetReduction = PetriNetReduction;
 }
 catch (err) {
 	//console.log(err);
@@ -8857,7 +8859,8 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PetriNetReachableVisibleTransitions: PetriNetReachableVisibleTransitions};
-	global.PetriNetReachableVisibleTransitions = PetriNetReachableVisibleTransitions;
+	globalThis.PetriNetReachableVisibleTransitions =
+    PetriNetReachableVisibleTransitions;
 }
 catch (err) {
 	//console.log(err);
@@ -8997,8 +9000,8 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PnmlImporter: PnmlImporter};
-	global.PnmlImporter = PnmlImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.PnmlImporter = PnmlImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node
@@ -9113,13 +9116,13 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PnmlExporter: PnmlExporter};
-	global.PnmlExporter = PnmlExporter;
+	globalThis.PnmlExporter = PnmlExporter;
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -9183,8 +9186,8 @@ class ProcessTree {
 try {
 	require('../../pm4js.js');
 	module.exports = { ProcessTree: ProcessTree, ProcessTreeOperator: ProcessTreeOperator };
-	global.ProcessTree = ProcessTree;
-	global.ProcessTreeOperator = ProcessTreeOperator;
+	globalThis.ProcessTree = ProcessTree;
+  globalThis.ProcessTreeOperator = ProcessTreeOperator;
 }
 catch (err) {
 	// not in Node
@@ -9349,7 +9352,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../petri_net/util/reduction.js');
 	module.exports = {ProcessTreeToPetriNetConverter: ProcessTreeToPetriNetConverter};
-	global.ProcessTreeToPetriNetConverter = ProcessTreeToPetriNetConverter;
+	globalThis.ProcessTreeToPetriNetConverter = ProcessTreeToPetriNetConverter;
 }
 catch (err) {
 	//console.log(err);
@@ -9427,8 +9430,8 @@ try {
 	require('../../../pm4js.js');
 	require('../process_tree.js');
 	module.exports = {PtmlImporter: PtmlImporter};
-	global.PtmlImporter = PtmlImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.PtmlImporter = PtmlImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node
@@ -9516,7 +9519,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/process_tree/process_tree.js');
 	module.exports = {ProcessTreeVanillaVisualizer: ProcessTreeVanillaVisualizer};
-	global.ProcessTreeVanillaVisualizer = ProcessTreeVanillaVisualizer;
+	globalThis.ProcessTreeVanillaVisualizer = ProcessTreeVanillaVisualizer;
 }
 catch (err) {
 	// not in node
@@ -9592,7 +9595,7 @@ class PetriNetVanillaVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {PetriNetVanillaVisualizer: PetriNetVanillaVisualizer};
-	global.PetriNetVanillaVisualizer = PetriNetVanillaVisualizer;
+	globalThis.PetriNetVanillaVisualizer = PetriNetVanillaVisualizer;
 }
 catch (err) {
 	// not in node
@@ -9850,7 +9853,7 @@ class LogGeneralFiltering {
 try {
 	require('../../../pm4js.js');
 	module.exports = {LogGeneralFiltering: LogGeneralFiltering};
-	global.LogGeneralFiltering = LogGeneralFiltering;
+	globalThis.LogGeneralFiltering = LogGeneralFiltering;
 }
 catch (err) {
 	// not in Node
@@ -9973,7 +9976,7 @@ class LtlFiltering {
 try {
 	require('../../../pm4js.js');
 	module.exports = {LtlFiltering: LtlFiltering};
-	global.LtlFiltering = LtlFiltering;
+	globalThis.LtlFiltering = LtlFiltering;
 }
 catch (err) {
 	// not in Node
@@ -10003,7 +10006,7 @@ try {
 	require('../../../objects/process_tree/process_tree.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {FlowerMiner: FlowerMiner};
-	global.FlowerMiner = FlowerMiner;
+	globalThis.FlowerMiner = FlowerMiner;
 }
 catch (err) {
 	// not in Node
@@ -10531,7 +10534,7 @@ class TokenBasedReplay {
 try {
 	require('../../../pm4js.js');
 	module.exports = {TokenBasedReplay: TokenBasedReplay};
-	global.TokenBasedReplay = TokenBasedReplay
+	globalThis.TokenBasedReplay = TokenBasedReplay;
 }
 catch (err) {
 	// not in Node
@@ -10568,8 +10571,8 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../conformance/tokenreplay/algorithm.js");
 	module.exports = {GeneralizationTbr: GeneralizationTbr, GeneralizationTbrResults: GeneralizationTbrResults};
-	global.GeneralizationTbr = GeneralizationTbr;
-	global.GeneralizationTbrResults = GeneralizationTbrResults;
+	globalThis.GeneralizationTbr = GeneralizationTbr;
+  globalThis.GeneralizationTbrResults = GeneralizationTbrResults;
 }
 catch (err) {
 	// not in Node
@@ -10620,8 +10623,8 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../../objects/petri_net/petri_net.js");
 	module.exports = {SimplicityArcDegree: SimplicityArcDegree, SimplicityArcDegreeResults: SimplicityArcDegreeResults};
-	global.SimplicityArcDegree = SimplicityArcDegree;
-	global.SimplicityArcDegreeResults = SimplicityArcDegreeResults;
+	globalThis.SimplicityArcDegree = SimplicityArcDegree;
+  globalThis.SimplicityArcDegreeResults = SimplicityArcDegreeResults;
 }
 catch (err) {
 	// not in Node
@@ -10686,7 +10689,7 @@ class FrequencyDfg {
 try {
 	require("../../../pm4js.js");
 	module.exports = {FrequencyDfg: FrequencyDfg};
-	global.FrequencyDfg = FrequencyDfg;
+	globalThis.FrequencyDfg = FrequencyDfg;
 }
 catch (err) {
 	// not in Node
@@ -10762,7 +10765,7 @@ class PerformanceDfg {
 try {
 	require("../../../pm4js.js");
 	module.exports = {PerformanceDfg: PerformanceDfg};
-	global.PerformanceDfg = PerformanceDfg;
+	globalThis.PerformanceDfg = PerformanceDfg;
 }
 catch (err) {
 	// not in Node
@@ -10944,7 +10947,7 @@ class DfgSliders {
 try {
 	require("../../../pm4js.js");
 	module.exports = {DfgSliders: DfgSliders};
-	global.DfgSliders = DfgSliders;
+	globalThis.DfgSliders = DfgSliders;
 }
 catch (err) {
 	// not in Node
@@ -11114,8 +11117,8 @@ try {
 	require("../../../objects/dfg/frequency/obj.js");
 	require("../../../objects/dfg/performance/obj.js");
 	module.exports = {FrequencyDfgDiscovery: FrequencyDfgDiscovery, PerformanceDfgDiscovery: PerformanceDfgDiscovery};
-	global.FrequencyDfgDiscovery = FrequencyDfgDiscovery;
-	global.PerformanceDfgDiscovery = PerformanceDfgDiscovery;
+	globalThis.FrequencyDfgDiscovery = FrequencyDfgDiscovery;
+  globalThis.PerformanceDfgDiscovery = PerformanceDfgDiscovery;
 }
 catch (err) {
 	// not in Node.JS
@@ -12389,8 +12392,9 @@ try {
 	require('../../../algo/discovery/dfg/algorithm.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {InductiveMiner: InductiveMiner, InductiveMinerSequenceCutDetector: InductiveMinerSequenceCutDetector};
-	global.InductiveMiner = InductiveMiner;
-	global.InductiveMinerSequenceCutDetector = InductiveMinerSequenceCutDetector;
+	globalThis.InductiveMiner = InductiveMiner;
+  globalThis.InductiveMinerSequenceCutDetector =
+    InductiveMinerSequenceCutDetector;
 }
 catch (err) {
 	// not in Node
@@ -12454,7 +12458,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/frequency/obj.js');
 	module.exports = {FrequencyDfgGraphvizVisualizer: FrequencyDfgGraphvizVisualizer};
-	global.FrequencyDfgGraphvizVisualizer = FrequencyDfgGraphvizVisualizer;
+	globalThis.FrequencyDfgGraphvizVisualizer = FrequencyDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
@@ -12509,7 +12513,8 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/performance/obj.js');
 	module.exports = {PerformanceDfgGraphvizVisualizer: PerformanceDfgGraphvizVisualizer};
-	global.PerformanceDfgGraphvizVisualizer = PerformanceDfgGraphvizVisualizer;
+	globalThis.PerformanceDfgGraphvizVisualizer =
+    PerformanceDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
@@ -12608,7 +12613,7 @@ class PetriNetFrequencyVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {PetriNetFrequencyVisualizer: PetriNetFrequencyVisualizer};
-	global.PetriNetFrequencyVisualizer = PetriNetFrequencyVisualizer;
+	globalThis.PetriNetFrequencyVisualizer = PetriNetFrequencyVisualizer;
 }
 catch (err) {
 	// not in node
@@ -12674,7 +12679,7 @@ class LogSkeleton {
 try {
 	require('../../pm4js.js');
 	module.exports = { LogSkeleton: LogSkeleton };
-	global.LogSkeleton = LogSkeleton;
+	globalThis.LogSkeleton = LogSkeleton;
 }
 catch (err) {
 	// not in Node
@@ -12814,7 +12819,7 @@ try {
 	require('../../../objects/skeleton/log_skeleton.js');
 	require('../../../statistics/log/general.js');
 	module.exports = {LogSkeletonDiscovery: LogSkeletonDiscovery};
-	global.LogSkeletonDiscovery = LogSkeletonDiscovery;
+	globalThis.LogSkeletonDiscovery = LogSkeletonDiscovery;
 }
 catch (err) {
 	// not in Node
@@ -13016,8 +13021,9 @@ class LogSkeletonConformanceChecking {
 try {
 	require('../../../pm4js.js');
 	module.exports = {LogSkeletonConformanceChecking: LogSkeletonConformanceChecking, LogSkeletonConformanceCheckingResult: LogSkeletonConformanceCheckingResult};
-	global.LogSkeletonConformanceChecking = LogSkeletonConformanceChecking;
-	global.LogSkeletonConformanceCheckingResult = LogSkeletonConformanceCheckingResult;
+	globalThis.LogSkeletonConformanceChecking = LogSkeletonConformanceChecking;
+  globalThis.LogSkeletonConformanceCheckingResult =
+    LogSkeletonConformanceCheckingResult;
 }
 catch (err) {
 	// not in Node
@@ -13596,7 +13602,7 @@ try {
 	require('../discovery/dfg/algorithm.js');
 	require('../../statistics/log/general.js');
 	module.exports = {CaseFeatures: CaseFeatures};
-	global.CaseFeatures = CaseFeatures;
+	globalThis.CaseFeatures = CaseFeatures;
 }
 catch (err) {
 	// not in node
@@ -13722,8 +13728,8 @@ class IntervalTreeAlgorithms {
 try {
 	require('../../pm4js.js');
 	module.exports = {IntervalTreeBuilder: IntervalTreeBuilder, IntervalTreeAlgorithms: IntervalTreeAlgorithms};
-	global.IntervalTreeBuilder = IntervalTreeBuilder;
-	global.IntervalTreeAlgorithms = IntervalTreeAlgorithms;
+	globalThis.IntervalTreeBuilder = IntervalTreeBuilder;
+  globalThis.IntervalTreeAlgorithms = IntervalTreeAlgorithms;
 }
 catch (err) {
 	// not in node
@@ -13802,7 +13808,7 @@ class PriorityQueue {
 try {
 	require('../../../pm4js.js');
 	module.exports = {PriorityQueue: PriorityQueue};
-	global.PriorityQueue = PriorityQueue;
+	globalThis.PriorityQueue = PriorityQueue;
 }
 catch (err) {
 	// not in Node
@@ -14049,8 +14055,8 @@ try {
 	require('../heapq.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {PetriNetAlignments: PetriNetAlignments, PetriNetAlignmentsResults: PetriNetAlignmentsResults};
-	global.PetriNetAlignments = PetriNetAlignments;
-	global.PetriNetAlignmentsResults = PetriNetAlignmentsResults;
+	globalThis.PetriNetAlignments = PetriNetAlignments;
+  globalThis.PetriNetAlignmentsResults = PetriNetAlignmentsResults;
 }
 catch (err) {
 	// not in Node
@@ -14278,8 +14284,8 @@ try {
 	require('../heapq.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {DfgAlignments: DfgAlignments, DfgAlignmentsResults: DfgAlignmentsResults};
-	global.DfgAlignments = DfgAlignments;
-	global.DfgAlignmentsResults = DfgAlignmentsResults;
+	globalThis.DfgAlignments = DfgAlignments;
+  globalThis.DfgAlignmentsResults = DfgAlignmentsResults;
 }
 catch (err) {
 	// not in Node
@@ -14348,7 +14354,7 @@ try {
 	require('../../../../pm4js.js');
 	require('../../../conformance/alignments/heapq.js');
 	module.exports = {DfgPlayout: DfgPlayout};
-	global.DfgPlayout = DfgPlayout;
+	globalThis.DfgPlayout = DfgPlayout;
 }
 catch (err) {
 	// not in Node
@@ -14467,7 +14473,7 @@ class FilteredDfgMaximization {
 try {
 	require("../../../pm4js.js");
 	module.exports = {FilteredDfgMaximization: FilteredDfgMaximization};
-	global.FilteredDfgMaximization = FilteredDfgMaximization;
+	globalThis.FilteredDfgMaximization = FilteredDfgMaximization;
 }
 catch (err) {
 	// not in Node
@@ -14506,7 +14512,7 @@ try {
 	require('../../../pm4js.js');
 	require('../log.js');
 	module.exports = {EventLogPrefixes: EventLogPrefixes};
-	global.EventLogPrefixes = EventLogPrefixes;
+	globalThis.EventLogPrefixes = EventLogPrefixes;
 }
 catch (err) {
 	// not in node
@@ -14528,7 +14534,7 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../conformance/tokenreplay/algorithm.js");
 	module.exports = {TbrFitness: TbrFitness};
-	global.TbrFitness = TbrFitness;
+	globalThis.TbrFitness = TbrFitness;
 }
 catch (err) {
 	// not in Node
@@ -14550,7 +14556,7 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../conformance/alignments/petri_net/algorithm.js");
 	module.exports = {AlignmentsFitness: AlignmentsFitness};
-	global.AlignmentsFitness = AlignmentsFitness;
+	globalThis.AlignmentsFitness = AlignmentsFitness;
 }
 catch (err) {
 	// not in Node
@@ -14621,8 +14627,8 @@ try {
 	require("../../../../objects/petri_net/util/reachable_visible_transitions.js");
 	require("../../../../statistics/log/general.js");
 	module.exports = {ETConformance: ETConformance, ETConformanceResult: ETConformanceResult};
-	global.ETConformance = ETConformance;
-	global.ETConformanceResult = ETConformanceResult;
+	globalThis.ETConformance = ETConformance;
+  globalThis.ETConformanceResult = ETConformanceResult;
 }
 catch (err) {
 	// not in Node
@@ -14833,9 +14839,9 @@ class BpmnEdge {
 try {
 	require('../../pm4js.js');
 	module.exports = {BpmnGraph: BpmnGraph, BpmnNode: BpmnNode, BpmnEdge: BpmnEdge};
-	global.BpmnGraph = BpmnGraph;
-	global.BpmnNode = BpmnNode;
-	global.BpmnEdge = BpmnEdge;
+	globalThis.BpmnGraph = BpmnGraph;
+  globalThis.BpmnNode = BpmnNode;
+  globalThis.BpmnEdge = BpmnEdge;
 }
 catch (err) {
 	// not in node
@@ -15023,8 +15029,8 @@ try {
 	require('../../../pm4js.js');
 	require('../bpmn_graph.js');
 	module.exports = {BpmnImporter: BpmnImporter};
-	global.BpmnImporter = BpmnImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.BpmnImporter = BpmnImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node
@@ -15166,13 +15172,13 @@ try {
 	require('../../../pm4js.js');
 	require('../bpmn_graph.js');
 	module.exports = {BpmnExporter: BpmnExporter};
-	global.BpmnExporter = BpmnExporter;
+	globalThis.BpmnExporter = BpmnExporter;
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -15343,7 +15349,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../petri_net/util/reduction.js');
 	module.exports = {BpmnToPetriNetConverter: BpmnToPetriNetConverter};
-	global.BpmnToPetriNetConverter = BpmnToPetriNetConverter;
+	globalThis.BpmnToPetriNetConverter = BpmnToPetriNetConverter;
 }
 catch (err) {
 	//console.log(err);
@@ -15478,7 +15484,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../bpmn/bpmn_graph.js');
 	module.exports = {WfNetToBpmnConverter: WfNetToBpmnConverter};
-	global.WfNetToBpmnConverter = WfNetToBpmnConverter;
+	globalThis.WfNetToBpmnConverter = WfNetToBpmnConverter;
 }
 catch (err) {
 	//console.log(err);
@@ -15583,14 +15589,14 @@ PtmlExporter.DUMMY_SEP = "AIOEWFRIUOERWQIO";
 
 try {
 	require('../../../pm4js.js');
-	global.PtmlExporter = PtmlExporter;
+	globalThis.PtmlExporter = PtmlExporter;
 	module.exports = {PtmlExporter: PtmlExporter};
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -15626,7 +15632,7 @@ class FrequencyDfgExporter {
 
 try {
 	require('../../../pm4js.js');
-	global.FrequencyDfgExporter = FrequencyDfgExporter;
+	globalThis.FrequencyDfgExporter = FrequencyDfgExporter;
 	module.exports = {FrequencyDfgExporter: FrequencyDfgExporter};
 }
 catch (err) {
@@ -15695,7 +15701,7 @@ class FrequencyDfgImporter {
 
 try {
 	require('../../../pm4js.js');
-	global.FrequencyDfgImporter = FrequencyDfgImporter;
+	globalThis.FrequencyDfgImporter = FrequencyDfgImporter;
 	module.exports = {FrequencyDfgImporter: FrequencyDfgImporter};
 }
 catch (err) {
@@ -15742,7 +15748,7 @@ class PetriNetPlayout {
 
 try {
 	require('../../../../pm4js.js');
-	global.PetriNetPlayout = PetriNetPlayout;
+	globalThis.PetriNetPlayout = PetriNetPlayout;
 	module.exports = {PetriNetPlayout: PetriNetPlayout};
 }
 catch (err) {
@@ -15832,7 +15838,7 @@ ExponentialRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.ExponentialRandomVariable = ExponentialRandomVariable;
+	globalThis.ExponentialRandomVariable = ExponentialRandomVariable;
 	module.exports = {ExponentialRandomVariable: ExponentialRandomVariable};
 }
 catch (err) {
@@ -15949,7 +15955,7 @@ NormalRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.NormalRandomVariable = NormalRandomVariable;
+	globalThis.NormalRandomVariable = NormalRandomVariable;
 	module.exports = {NormalRandomVariable: NormalRandomVariable};
 }
 catch (err) {
@@ -16077,7 +16083,7 @@ LogNormalRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.LogNormalRandomVariable = LogNormalRandomVariable;
+	globalThis.LogNormalRandomVariable = LogNormalRandomVariable;
 	module.exports = {LogNormalRandomVariable: LogNormalRandomVariable};
 }
 catch (err) {
@@ -16194,7 +16200,7 @@ GammaRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.GammaRandomVariable = GammaRandomVariable;
+	globalThis.GammaRandomVariable = GammaRandomVariable;
 	module.exports = {GammaRandomVariable: GammaRandomVariable};
 }
 catch (err) {
@@ -16292,7 +16298,7 @@ class ExponentiallyModifiedGaussian {
 
 try {
 	require('../../pm4js.js');
-	global.ExponentiallyModifiedGaussian = ExponentiallyModifiedGaussian;
+	globalThis.ExponentiallyModifiedGaussian = ExponentiallyModifiedGaussian;
 	module.exports = {ExponentiallyModifiedGaussian: ExponentiallyModifiedGaussian};
 }
 catch (err) {
@@ -16393,7 +16399,7 @@ UniformRandomVariable.C = 1;
 
 try {
 	require('../../pm4js.js');
-	global.UniformRandomVariable = UniformRandomVariable;
+	globalThis.UniformRandomVariable = UniformRandomVariable;
 	module.exports = {UniformRandomVariable: UniformRandomVariable};
 }
 catch (err) {
@@ -16497,7 +16503,7 @@ class RandomVariableFitter {
 
 try {
 	require('../../pm4js.js');
-	global.RandomVariableFitter = RandomVariableFitter;
+	globalThis.RandomVariableFitter = RandomVariableFitter;
 	module.exports = {RandomVariableFitter: RandomVariableFitter};
 }
 catch (err) {
@@ -16574,7 +16580,7 @@ class PerformanceDfgSimulation {
 try {
 	require("../../../../pm4js.js");
 	module.exports = {PerformanceDfgSimulation: PerformanceDfgSimulation};
-	global.PerformanceDfgSimulation = PerformanceDfgSimulation;
+	globalThis.PerformanceDfgSimulation = PerformanceDfgSimulation;
 }
 catch (err) {
 	// not in Node
@@ -16676,7 +16682,7 @@ class Ocel20FormatFixer {
 try {
 	require('../../../pm4js.js');
 	module.exports = {Ocel20FormatFixer: Ocel20FormatFixer};
-	global.Ocel20FormatFixer = Ocel20FormatFixer;
+	globalThis.Ocel20FormatFixer = Ocel20FormatFixer;
 }
 catch (err) {
 	// not in node
@@ -16701,7 +16707,7 @@ class JsonOcelImporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {JsonOcelImporter: JsonOcelImporter};
-	global.JsonOcelImporter = JsonOcelImporter;
+	globalThis.JsonOcelImporter = JsonOcelImporter;
 }
 catch (err) {
 	// not in node
@@ -16862,8 +16868,8 @@ class XmlOcelImporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {XmlOcelImporter: XmlOcelImporter};
-	global.XmlOcelImporter = XmlOcelImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.XmlOcelImporter = XmlOcelImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in node
@@ -17064,8 +17070,8 @@ class Xml2OcelImporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {Xml2OcelImporter: Xml2OcelImporter};
-	global.Xml2OcelImporter = Xml2OcelImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.Xml2OcelImporter = Xml2OcelImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in node
@@ -17344,7 +17350,7 @@ class SqliteOcel2Importer {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {SqliteOcel2Importer: SqliteOcel2Importer};
-	global.SqliteOcel2Importer = SqliteOcel2Importer;
+	globalThis.SqliteOcel2Importer = SqliteOcel2Importer;
 }
 catch (err) {
 	// not in node
@@ -17366,7 +17372,7 @@ class JsonOcelExporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {JsonOcelExporter: JsonOcelExporter};
-	global.JsonOcelExporter = JsonOcelExporter;
+	globalThis.JsonOcelExporter = JsonOcelExporter;
 }
 catch (err) {
 	// not in node
@@ -17532,13 +17538,13 @@ class XmlOcelExporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {XmlOcelExporter: XmlOcelExporter};
-	global.XmlOcelExporter = XmlOcelExporter;
+	globalThis.XmlOcelExporter = XmlOcelExporter;
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -17699,13 +17705,13 @@ class Xml2OcelExporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {Xml2OcelExporter: Xml2OcelExporter};
-	global.Xml2OcelExporter = Xml2OcelExporter;
+	globalThis.Xml2OcelExporter = Xml2OcelExporter;
 	const jsdom = require("jsdom");
 	const { JSDOM } = jsdom;
-	global.dom = new JSDOM('<!doctype html><html><body></body></html>');
-	global.window = dom.window;
-	global.document = dom.window.document;
-	global.navigator = global.window.navigator;
+	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.navigator = globalThis.window.navigator;
 }
 catch (err) {
 	// not in node
@@ -17838,7 +17844,7 @@ class SqliteOcel2Exporter {
 try {
 	require('../../../../pm4js.js');
 	module.exports = {SqliteOcel2Exporter: SqliteOcel2Exporter};
-	global.SqliteOcel2Exporter = SqliteOcel2Exporter;
+	globalThis.SqliteOcel2Exporter = SqliteOcel2Exporter;
 }
 catch (err) {
 	// not in node
@@ -17886,7 +17892,7 @@ class OcelFlattening {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelFlattening: OcelFlattening};
-	global.OcelFlattening = OcelFlattening;
+	globalThis.OcelFlattening = OcelFlattening;
 }
 catch (err) {
 	// not in node
@@ -18010,7 +18016,7 @@ class OcelToCelonis {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelToCelonis: OcelToCelonis};
-	global.OcelToCelonis = OcelToCelonis;
+	globalThis.OcelToCelonis = OcelToCelonis;
 }
 catch (err) {
 	// not in node
@@ -18049,7 +18055,7 @@ class OcelParentChildrenAttribute {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelParentChildrenAttribute: OcelParentChildrenAttribute};
-	global.OcelParentChildrenAttribute = OcelParentChildrenAttribute;
+	globalThis.OcelParentChildrenAttribute = OcelParentChildrenAttribute;
 }
 catch (err) {
 	// not in node
@@ -18459,9 +18465,9 @@ CelonisMapper.PROXY_URL_GET = "http://localhost:5004/getWrapper";
 CelonisMapper.PROXY_URL_POST = "http://localhost:5004/postWrapper";
 CelonisMapper.PROXY_URL_PUT = "http://localhost:5004/putWrapper";
 try {
-	global.retus = require("retus");
+	globalThis.retus = require("retus");
 	require('../../pm4js.js');
-	global.CelonisMapper = CelonisMapper;
+	globalThis.CelonisMapper = CelonisMapper;
 	module.exports = {CelonisMapper: CelonisMapper};
 	CelonisMapper.IS_NODE = true;
 }
@@ -18802,7 +18808,7 @@ class Celonis1DWrapper {
 
 try {
 	require('../../pm4js.js');
-	global.Celonis1DWrapper = Celonis1DWrapper;
+	globalThis.Celonis1DWrapper = Celonis1DWrapper;
 	module.exports = {Celonis1DWrapper: Celonis1DWrapper};
 }
 catch (err) {
@@ -19035,7 +19041,7 @@ class CelonisNDWrapper {
 
 try {
 	require('../../pm4js.js');
-	global.CelonisNDWrapper = CelonisNDWrapper;
+	globalThis.CelonisNDWrapper = CelonisNDWrapper;
 	module.exports = {CelonisNDWrapper: CelonisNDWrapper};
 }
 catch (err) {
@@ -19118,7 +19124,7 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/frequency/obj.js');
 	module.exports = {AlignmentsDfgGraphvizVisualizer: AlignmentsDfgGraphvizVisualizer};
-	global.AlignmentsDfgGraphvizVisualizer = AlignmentsDfgGraphvizVisualizer;
+	globalThis.AlignmentsDfgGraphvizVisualizer = AlignmentsDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
@@ -19196,7 +19202,7 @@ class TemporalProfileDiscovery {
 try {
 	require("../../../pm4js.js");
 	module.exports = {TemporalProfileDiscovery: TemporalProfileDiscovery};
-	global.TemporalProfileDiscovery = TemporalProfileDiscovery;
+	globalThis.TemporalProfileDiscovery = TemporalProfileDiscovery;
 }
 catch (err) {
 	// not in Node.JS
@@ -19263,7 +19269,7 @@ class TemporalProfileConformance {
 try {
 	require("../../../pm4js.js");
 	module.exports = {TemporalProfileConformance: TemporalProfileConformance};
-	global.TemporalProfileConformance = TemporalProfileConformance;
+	globalThis.TemporalProfileConformance = TemporalProfileConformance;
 }
 catch (err) {
 	// not in Node.JS
@@ -19739,7 +19745,7 @@ class OcelGraphs {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelGraphs: OcelGraphs};
-	global.OcelGraphs = OcelGraphs;
+	globalThis.OcelGraphs = OcelGraphs;
 }
 catch (err) {
 	// not in node
@@ -19786,7 +19792,7 @@ class OcelConnectedComponents {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelConnectedComponents: OcelConnectedComponents};
-	global.OcelConnectedComponents = OcelConnectedComponents;
+	globalThis.OcelConnectedComponents = OcelConnectedComponents;
 }
 catch (err) {
 	// not in node
@@ -19867,7 +19873,7 @@ class OcelIntervalTree {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelIntervalTree: OcelIntervalTree};
-	global.OcelIntervalTree = OcelIntervalTree;
+	globalThis.OcelIntervalTree = OcelIntervalTree;
 }
 catch (err) {
 	// not in node
@@ -20261,7 +20267,7 @@ class OcelEventFeatures {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelEventFeatures: OcelEventFeatures};
-	global.OcelEventFeatures = OcelEventFeatures;
+	globalThis.OcelEventFeatures = OcelEventFeatures;
 }
 catch (err) {
 	// not in node
@@ -20690,7 +20696,7 @@ class OcelObjectFeatures {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelObjectFeatures: OcelObjectFeatures};
-	global.OcelObjectFeatures = OcelObjectFeatures;
+	globalThis.OcelObjectFeatures = OcelObjectFeatures;
 }
 catch (err) {
 	// not in node
@@ -20727,7 +20733,7 @@ class EventLogToStream {
 try {
 	require('../../../pm4js.js');
 	module.exports = {EventLogToStream: EventLogToStream};
-	global.EventLogToStream = EventLogToStream;
+	globalThis.EventLogToStream = EventLogToStream;
 }
 catch (err) {
 	// not in node
@@ -20795,7 +20801,7 @@ class StreamAttrWrapper {
 try {
 	require('../../pm4js.js');
 	module.exports = {StreamAttrWrapper: StreamAttrWrapper};
-	global.StreamAttrWrapper = StreamAttrWrapper;
+	globalThis.StreamAttrWrapper = StreamAttrWrapper;
 }
 catch (err) {
 	// not in node
@@ -20965,7 +20971,7 @@ class OcelLinkAnalysis {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelLinkAnalysis: OcelLinkAnalysis};
-	global.OcelLinkAnalysis = OcelLinkAnalysis;
+	globalThis.OcelLinkAnalysis = OcelLinkAnalysis;
 }
 catch (err) {
 	// not in node
@@ -21105,7 +21111,7 @@ class LogLinksAnalysis {
 try {
 	require('../../pm4js.js');
 	module.exports = {LogLinksAnalysis: LogLinksAnalysis};
-	global.LogLinksAnalysis = LogLinksAnalysis;
+	globalThis.LogLinksAnalysis = LogLinksAnalysis;
 }
 catch (err) {
 	// not in node
@@ -21166,7 +21172,7 @@ class NetworkAnalysis {
 try {
 	require('../../../pm4js.js');
 	module.exports = {NetworkAnalysis: NetworkAnalysis};
-	global.NetworkAnalysis = NetworkAnalysis;
+	globalThis.NetworkAnalysis = NetworkAnalysis;
 }
 catch (err) {
 	// not in node
@@ -21233,7 +21239,7 @@ class NetworkAnalysisGraphvizVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {NetworkAnalysisGraphvizVisualizer: NetworkAnalysisGraphvizVisualizer};
-	global.NetworkAnalysisGraphvizVisualizer = NetworkAnalysisGraphvizVisualizer;
+	globalThis.NetworkAnalysisGraphvizVisualizer = NetworkAnalysisGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
@@ -21492,7 +21498,7 @@ class GeneralOcelStatistics {
 try {
 	require('../../pm4js.js');
 	module.exports = {GeneralOcelStatistics: GeneralOcelStatistics};
-	global.GeneralOcelStatistics = GeneralOcelStatistics;
+	globalThis.GeneralOcelStatistics = GeneralOcelStatistics;
 }
 catch (err) {
 	// not in node
@@ -21630,7 +21636,7 @@ class DtUtils {
 try {
 	require('../../pm4js.js');
 	module.exports = {DtUtils: DtUtils};
-	global.DtUtils = DtUtils;
+	globalThis.DtUtils = DtUtils;
 }
 catch (err) {
 	// not in node
@@ -21706,7 +21712,7 @@ try {
 	require('../../../pm4js.js');
 	require('../bpmn_graph.js');
 	module.exports = {DagreBPMNLayouting: DagreBPMNLayouting};
-	global.DagreBPMNLayouting = DagreBPMNLayouting;
+	globalThis.DagreBPMNLayouting = DagreBPMNLayouting;
 }
 catch (err) {
 	// not in Node
@@ -21767,7 +21773,7 @@ class StatisticsUtils {
 try {
 	require('../../pm4js.js');
 	module.exports = {StatisticsUtils: StatisticsUtils};
-	global.StatisticsUtils = StatisticsUtils;
+	globalThis.StatisticsUtils = StatisticsUtils;
 }
 catch (err) {
 	// not in node
@@ -22509,7 +22515,7 @@ class OcelGeneralFiltering {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelGeneralFiltering: OcelGeneralFiltering};
-	global.OcelGeneralFiltering = OcelGeneralFiltering;
+	globalThis.OcelGeneralFiltering = OcelGeneralFiltering;
 }
 catch (err) {
 	// not in Node
@@ -22606,7 +22612,7 @@ class MlRules {
 try {
 	require('../../pm4js.js');
 	module.exports = {MlRules: MlRules};
-	global.MlRules = MlRules;
+	globalThis.MlRules = MlRules;
 }
 catch (err) {
 	// not in node
@@ -22700,7 +22706,7 @@ CsvOcelImporter.DEFAULT_QUOTECHAR = '"';
 try {
 	require('../../../../pm4js.js');
 	module.exports = {CsvOcelImporter: CsvOcelImporter};
-	global.CsvOcelImporter = CsvOcelImporter;
+	globalThis.CsvOcelImporter = CsvOcelImporter;
 }
 catch (err) {
 	// not in node
@@ -22765,7 +22771,7 @@ CsvOcelExporter.DEFAULT_NEWLINE = '\n';
 try {
 	require('../../../../pm4js.js');
 	module.exports = {CsvOcelExporter: CsvOcelExporter};
-	global.CsvOcelExporter = CsvOcelExporter;
+	globalThis.CsvOcelExporter = CsvOcelExporter;
 }
 catch (err) {
 	// not in node
@@ -22896,7 +22902,7 @@ class OcelObjRelationsVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelObjRelationsVisualizer: OcelObjRelationsVisualizer};
-	global.OcelObjRelationsVisualizer = OcelObjRelationsVisualizer;
+	globalThis.OcelObjRelationsVisualizer = OcelObjRelationsVisualizer;
 }
 catch (err) {
 	// not in node
@@ -23022,7 +23028,7 @@ class OcelObjRelations2Visualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelObjRelations2Visualizer: OcelObjRelations2Visualizer};
-	global.OcelObjRelations2Visualizer = OcelObjRelations2Visualizer;
+	globalThis.OcelObjRelations2Visualizer = OcelObjRelations2Visualizer;
 }
 catch (err) {
 	// not in node

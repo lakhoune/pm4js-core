@@ -216,8 +216,8 @@ try {
 	require('../heapq.js');
 	require('../../../../statistics/log/general.js');
 	module.exports = {DfgAlignments: DfgAlignments, DfgAlignmentsResults: DfgAlignmentsResults};
-	global.DfgAlignments = DfgAlignments;
-	global.DfgAlignmentsResults = DfgAlignmentsResults;
+	globalThis.DfgAlignments = DfgAlignments;
+  globalThis.DfgAlignmentsResults = DfgAlignmentsResults;
 }
 catch (err) {
 	// not in Node

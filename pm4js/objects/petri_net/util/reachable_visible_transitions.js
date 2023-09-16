@@ -32,7 +32,8 @@ try {
 	require('../../../pm4js.js');
 	require('../petri_net.js');
 	module.exports = {PetriNetReachableVisibleTransitions: PetriNetReachableVisibleTransitions};
-	global.PetriNetReachableVisibleTransitions = PetriNetReachableVisibleTransitions;
+	globalThis.PetriNetReachableVisibleTransitions =
+    PetriNetReachableVisibleTransitions;
 }
 catch (err) {
 	//console.log(err);

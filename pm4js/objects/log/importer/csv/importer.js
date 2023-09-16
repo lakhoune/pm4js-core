@@ -81,7 +81,7 @@ try {
 	require('../../../../pm4js.js');
 	require('../../log.js');
 	module.exports = {CsvImporter: CsvImporter};
-	global.CsvImporter = CsvImporter;
+	globalThis.CsvImporter = CsvImporter;
 }
 catch (err) {
 	// not in node

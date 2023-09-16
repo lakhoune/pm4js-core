@@ -114,8 +114,8 @@ class IntervalTreeAlgorithms {
 try {
 	require('../../pm4js.js');
 	module.exports = {IntervalTreeBuilder: IntervalTreeBuilder, IntervalTreeAlgorithms: IntervalTreeAlgorithms};
-	global.IntervalTreeBuilder = IntervalTreeBuilder;
-	global.IntervalTreeAlgorithms = IntervalTreeAlgorithms;
+	globalThis.IntervalTreeBuilder = IntervalTreeBuilder;
+  globalThis.IntervalTreeAlgorithms = IntervalTreeAlgorithms;
 }
 catch (err) {
 	// not in node

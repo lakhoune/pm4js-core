@@ -467,7 +467,7 @@ class OcelGraphs {
 try {
 	require('../../pm4js.js');
 	module.exports = {OcelGraphs: OcelGraphs};
-	global.OcelGraphs = OcelGraphs;
+	globalThis.OcelGraphs = OcelGraphs;
 }
 catch (err) {
 	// not in node

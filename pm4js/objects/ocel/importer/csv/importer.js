@@ -85,7 +85,7 @@ CsvOcelImporter.DEFAULT_QUOTECHAR = '"';
 try {
 	require('../../../../pm4js.js');
 	module.exports = {CsvOcelImporter: CsvOcelImporter};
-	global.CsvOcelImporter = CsvOcelImporter;
+	globalThis.CsvOcelImporter = CsvOcelImporter;
 }
 catch (err) {
 	// not in node

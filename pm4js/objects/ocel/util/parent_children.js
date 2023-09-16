@@ -29,7 +29,7 @@ class OcelParentChildrenAttribute {
 try {
 	require('../../../pm4js.js');
 	module.exports = {OcelParentChildrenAttribute: OcelParentChildrenAttribute};
-	global.OcelParentChildrenAttribute = OcelParentChildrenAttribute;
+	globalThis.OcelParentChildrenAttribute = OcelParentChildrenAttribute;
 }
 catch (err) {
 	// not in node

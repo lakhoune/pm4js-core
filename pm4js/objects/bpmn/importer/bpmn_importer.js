@@ -180,8 +180,8 @@ try {
 	require('../../../pm4js.js');
 	require('../bpmn_graph.js');
 	module.exports = {BpmnImporter: BpmnImporter};
-	global.BpmnImporter = BpmnImporter;
-	global.DOMParser = require('xmldom').DOMParser;
+	globalThis.BpmnImporter = BpmnImporter;
+  globalThis.DOMParser = require("xmldom").DOMParser;
 }
 catch (err) {
 	// not in Node

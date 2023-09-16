@@ -12,7 +12,7 @@ try {
 	require("../../../../pm4js.js");
 	require("../../../conformance/alignments/petri_net/algorithm.js");
 	module.exports = {AlignmentsFitness: AlignmentsFitness};
-	global.AlignmentsFitness = AlignmentsFitness;
+	globalThis.AlignmentsFitness = AlignmentsFitness;
 }
 catch (err) {
 	// not in Node

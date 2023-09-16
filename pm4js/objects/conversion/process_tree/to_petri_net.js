@@ -155,7 +155,7 @@ try {
 	require('../../petri_net/petri_net.js');
 	require('../../petri_net/util/reduction.js');
 	module.exports = {ProcessTreeToPetriNetConverter: ProcessTreeToPetriNetConverter};
-	global.ProcessTreeToPetriNetConverter = ProcessTreeToPetriNetConverter;
+	globalThis.ProcessTreeToPetriNetConverter = ProcessTreeToPetriNetConverter;
 }
 catch (err) {
 	//console.log(err);

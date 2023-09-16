@@ -199,9 +199,9 @@ class BpmnEdge {
 try {
 	require('../../pm4js.js');
 	module.exports = {BpmnGraph: BpmnGraph, BpmnNode: BpmnNode, BpmnEdge: BpmnEdge};
-	global.BpmnGraph = BpmnGraph;
-	global.BpmnNode = BpmnNode;
-	global.BpmnEdge = BpmnEdge;
+	globalThis.BpmnGraph = BpmnGraph;
+  globalThis.BpmnNode = BpmnNode;
+  globalThis.BpmnEdge = BpmnEdge;
 }
 catch (err) {
 	// not in node

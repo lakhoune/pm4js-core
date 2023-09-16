@@ -24,7 +24,7 @@ class FrequencyDfgExporter {
 
 try {
 	require('../../../pm4js.js');
-	global.FrequencyDfgExporter = FrequencyDfgExporter;
+	globalThis.FrequencyDfgExporter = FrequencyDfgExporter;
 	module.exports = {FrequencyDfgExporter: FrequencyDfgExporter};
 }
 catch (err) {

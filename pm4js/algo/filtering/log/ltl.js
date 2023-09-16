@@ -115,7 +115,7 @@ class LtlFiltering {
 try {
 	require('../../../pm4js.js');
 	module.exports = {LtlFiltering: LtlFiltering};
-	global.LtlFiltering = LtlFiltering;
+	globalThis.LtlFiltering = LtlFiltering;
 }
 catch (err) {
 	// not in Node

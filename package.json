@@ -1,6 +1,6 @@
 {
   "name": "pm4js",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "description": "Process Mining for Javascript",
   "main": "init.js",
   "directories": {
@@ -10,7 +10,7 @@
     "retus": "^1.1.2",
     "xmldom": "^0.6.0",
     "xmlserializer": "^0.6.1",
-	"sql.js": "^1.8.0"
+    "sql.js": "^1.8.0"
   },
   "devDependencies": {
     "jest": "^27.1.1"

@@ -70,7 +70,7 @@ class TemporalProfileDiscovery {
 try {
 	require("../../../pm4js.js");
 	module.exports = {TemporalProfileDiscovery: TemporalProfileDiscovery};
-	global.TemporalProfileDiscovery = TemporalProfileDiscovery;
+	globalThis.TemporalProfileDiscovery = TemporalProfileDiscovery;
 }
 catch (err) {
 	// not in Node.JS

@@ -47,7 +47,8 @@ try {
 	require('../../pm4js.js');
 	require('../../objects/dfg/performance/obj.js');
 	module.exports = {PerformanceDfgGraphvizVisualizer: PerformanceDfgGraphvizVisualizer};
-	global.PerformanceDfgGraphvizVisualizer = PerformanceDfgGraphvizVisualizer;
+	globalThis.PerformanceDfgGraphvizVisualizer =
+    PerformanceDfgGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
