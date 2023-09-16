@@ -161,7 +161,7 @@ catch (err) {
   // See https://github.com/EvanHahn/HumanizeDuration.js/issues/143 for more.
   var greek = {
     y: function (c) {
-      return c === 1 ? "χ�όνος" : "χ�όνια";
+      return c === 1 ? "χρόνος" : "χρόνια";
     },
     mo: function (c) {
       return c === 1 ? "μήνας" : "μήνες";
@@ -170,21 +170,21 @@ catch (err) {
       return c === 1 ? "εβδομάδα" : "εβδομάδες";
     },
     d: function (c) {
-      return c === 1 ? "μέ�α" : "μέ�ες";
+      return c === 1 ? "μέρα" : "μέρες";
     },
     h: function (c) {
-      return c === 1 ? "ώ�α" : "ώ�ες";
+      return c === 1 ? "ώρα" : "ώρες";
     },
     m: function (c) {
       return c === 1 ? "λεπτό" : "λεπτά";
     },
     s: function (c) {
-      return c === 1 ? "δευτε�όλεπτο" : "δευτε�όλεπτα";
+      return c === 1 ? "δευτερόλεπτο" : "δευτερόλεπτα";
     },
     ms: function (c) {
       return c === 1
-        ? "χιλιοστό του δευτε�ολέπτου"
-        : "χιλιοστά του δευτε�ολέπτου";
+        ? "χιλιοστό του δευτερολέπτου"
+        : "χιλιοστά του δευτερολέπτου";
     },
     decimal: ","
   };
@@ -263,37 +263,37 @@ catch (err) {
         return ["години", "година", "години"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме�еца", "ме�ец", "ме�еца"][getSlavicForm(c)];
+        return ["месеца", "месец", "месеца"][getSlavicForm(c)];
       },
       w: function (c) {
-        return ["�едмици", "�едмица", "�едмици"][getSlavicForm(c)];
+        return ["седмици", "седмица", "седмици"][getSlavicForm(c)];
       },
       d: function (c) {
         return ["дни", "ден", "дни"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["ча�а", "ча�", "ча�а"][getSlavicForm(c)];
+        return ["часа", "час", "часа"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минути", "минута", "минути"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунди", "�екунда", "�екунди"][getSlavicForm(c)];
+        return ["секунди", "секунда", "секунди"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мили�екунди", "мили�екунда", "мили�екунди"][getSlavicForm(c)];
+        return ["милисекунди", "милисекунда", "милисекунди"][getSlavicForm(c)];
       },
       decimal: ","
     },
     bn: {
       y: "বছর",
       mo: "মাস",
-      w: "সপ�তাহ",
+      w: "সপ্তাহ",
       d: "দিন",
-      h: "ঘন�টা",
+      h: "ঘন্টা",
       m: "মিনিট",
-      s: "সেকেন�ড",
-      ms: "মিলিসেকেন�ড"
+      s: "সেকেন্ড",
+      ms: "মিলিসেকেন্ড"
     },
     ca: {
       y: function (c) {
@@ -538,7 +538,7 @@ catch (err) {
     fa: {
       y: "سال",
       mo: "ماه",
-      w: "ه�ته",
+      w: "هفته",
       d: "روز",
       h: "ساعت",
       m: "دقیقه",
@@ -622,16 +622,16 @@ catch (err) {
     gr: greek,
     he: {
       y: function (c) {
-        return c === 1 ? "שנה" : "שני�";
+        return c === 1 ? "שנה" : "שנים";
       },
       mo: function (c) {
-        return c === 1 ? "חודש" : "חודשי�";
+        return c === 1 ? "חודש" : "חודשים";
       },
       w: function (c) {
         return c === 1 ? "שבוע" : "שבועות";
       },
       d: function (c) {
-        return c === 1 ? "יו�" : "ימי�";
+        return c === 1 ? "יום" : "ימים";
       },
       h: function (c) {
         return c === 1 ? "שעה" : "שעות";
@@ -713,7 +713,7 @@ catch (err) {
         return c === 1 ? "महीना" : "महीने";
       },
       w: function (c) {
-        return c === 1 ? "हफ़�ता" : "हफ�ते";
+        return c === 1 ? "हफ़्ता" : "हफ्ते";
       },
       d: "दिन",
       h: function (c) {
@@ -811,9 +811,9 @@ catch (err) {
     },
     km: {
       y: "ឆ្នាំ",
-      mo: "�ែ",
-      w: "សប្�ាហ�",
-      d: "�្ងៃ",
+      mo: "ខែ",
+      w: "សប្តាហ៍",
+      d: "ថ្ងៃ",
       h: "ម៉ោង",
       m: "នាទី",
       s: "វិនាទី",
@@ -821,35 +821,35 @@ catch (err) {
     },
     kn: {
       y: function (c) {
-        return c === 1 ? "ವರ�ಷ" : "ವರ�ಷಗಳ�";
+        return c === 1 ? "ವರ್ಷ" : "ವರ್ಷಗಳು";
       },
       mo: function (c) {
-        return c === 1 ? "ತಿಂಗಳ�" : "ತಿಂಗಳ�ಗಳ�";
+        return c === 1 ? "ತಿಂಗಳು" : "ತಿಂಗಳುಗಳು";
       },
       w: function (c) {
-        return c === 1 ? "ವಾರ" : "ವಾರಗಳ�";
+        return c === 1 ? "ವಾರ" : "ವಾರಗಳು";
       },
       d: function (c) {
-        return c === 1 ? "ದಿನ" : "ದಿನಗಳ�";
+        return c === 1 ? "ದಿನ" : "ದಿನಗಳು";
       },
       h: function (c) {
-        return c === 1 ? "ಗಂಟೆ" : "ಗಂಟೆಗಳ�";
+        return c === 1 ? "ಗಂಟೆ" : "ಗಂಟೆಗಳು";
       },
       m: function (c) {
-        return c === 1 ? "ನಿಮಿಷ" : "ನಿಮಿಷಗಳ�";
+        return c === 1 ? "ನಿಮಿಷ" : "ನಿಮಿಷಗಳು";
       },
       s: function (c) {
-        return c === 1 ? "ಸೆಕೆಂಡ�" : "ಸೆಕೆಂಡ�ಗಳ�";
+        return c === 1 ? "ಸೆಕೆಂಡ್" : "ಸೆಕೆಂಡುಗಳು";
       },
       ms: function (c) {
-        return c === 1 ? "ಮಿಲಿಸೆಕೆಂಡ�" : "ಮಿಲಿಸೆಕೆಂಡ�ಗಳ�";
+        return c === 1 ? "ಮಿಲಿಸೆಕೆಂಡ್" : "ಮಿಲಿಸೆಕೆಂಡುಗಳು";
       }
     },
     ko: {
       y: "년",
       mo: "개월",
-      w: "주�",
-      d: "�",
+      w: "주일",
+      d: "일",
       h: "시간",
       m: "분",
       s: "초",
@@ -888,7 +888,7 @@ catch (err) {
         return ["mėnuo", "mėnesiai", "mėnesių"][getLithuanianForm(c)];
       },
       w: function (c) {
-        return ["savaitė", "savaitės", "savai�ių"][getLithuanianForm(c)];
+        return ["savaitė", "savaitės", "savaičių"][getLithuanianForm(c)];
       },
       d: function (c) {
         return ["diena", "dienos", "dienų"][getLithuanianForm(c)];
@@ -897,7 +897,7 @@ catch (err) {
         return ["valanda", "valandos", "valandų"][getLithuanianForm(c)];
       },
       m: function (c) {
-        return ["minutė", "minutės", "minu�ių"][getLithuanianForm(c)];
+        return ["minutė", "minutės", "minučių"][getLithuanianForm(c)];
       },
       s: function (c) {
         return ["sekundė", "sekundės", "sekundžių"][getLithuanianForm(c)];
@@ -941,7 +941,7 @@ catch (err) {
         return c === 1 ? "година" : "години";
       },
       mo: function (c) {
-        return c === 1 ? "ме�ец" : "ме�еци";
+        return c === 1 ? "месец" : "месеци";
       },
       w: function (c) {
         return c === 1 ? "недела" : "недели";
@@ -950,22 +950,22 @@ catch (err) {
         return c === 1 ? "ден" : "дена";
       },
       h: function (c) {
-        return c === 1 ? "ча�" : "ча�а";
+        return c === 1 ? "час" : "часа";
       },
       m: function (c) {
         return c === 1 ? "минута" : "минути";
       },
       s: function (c) {
-        return c === 1 ? "�екунда" : "�екунди";
+        return c === 1 ? "секунда" : "секунди";
       },
       ms: function (c) {
-        return c === 1 ? "мили�екунда" : "мили�екунди";
+        return c === 1 ? "милисекунда" : "милисекунди";
       },
       decimal: ","
     },
     mr: {
       y: function (c) {
-        return c === 1 ? "वर�ष" : "वर�षे";
+        return c === 1 ? "वर्ष" : "वर्षे";
       },
       mo: function (c) {
         return c === 1 ? "महिना" : "महिने";
@@ -1130,25 +1130,25 @@ catch (err) {
         return ["лет", "год", "года"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме��цев", "ме��ц", "ме��ца"][getSlavicForm(c)];
+        return ["месяцев", "месяц", "месяца"][getSlavicForm(c)];
       },
       w: function (c) {
-        return ["недель", "недел�", "недели"][getSlavicForm(c)];
+        return ["недель", "неделя", "недели"][getSlavicForm(c)];
       },
       d: function (c) {
-        return ["дней", "день", "дн�"][getSlavicForm(c)];
+        return ["дней", "день", "дня"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["ча�ов", "ча�", "ча�а"][getSlavicForm(c)];
+        return ["часов", "час", "часа"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минут", "минута", "минуты"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунд", "�екунда", "�екунды"][getSlavicForm(c)];
+        return ["секунд", "секунда", "секунды"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["милли�екунд", "милли�екунда", "милли�екунды"][
+        return ["миллисекунд", "миллисекунда", "миллисекунды"][
           getSlavicForm(c)
         ];
       },
@@ -1178,7 +1178,7 @@ catch (err) {
         return ["години", "година", "године"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["ме�еци", "ме�ец", "ме�еца"][getSlavicForm(c)];
+        return ["месеци", "месец", "месеца"][getSlavicForm(c)];
       },
       w: function (c) {
         return ["недељи", "недеља", "недеље"][getSlavicForm(c)];
@@ -1187,69 +1187,69 @@ catch (err) {
         return ["дани", "дан", "дана"][getSlavicForm(c)];
       },
       h: function (c) {
-        return ["�ати", "�ат", "�ата"][getSlavicForm(c)];
+        return ["сати", "сат", "сата"][getSlavicForm(c)];
       },
       m: function (c) {
         return ["минута", "минут", "минута"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунди", "�екунда", "�екунде"][getSlavicForm(c)];
+        return ["секунди", "секунда", "секунде"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мили�екунди", "мили�екунда", "мили�екунде"][getSlavicForm(c)];
+        return ["милисекунди", "милисекунда", "милисекунде"][getSlavicForm(c)];
       },
       decimal: ","
     },
     ta: {
       y: function (c) {
-        return c === 1 ? "வர�டம�" : "ஆண�ட�கள�";
+        return c === 1 ? "வருடம்" : "ஆண்டுகள்";
       },
       mo: function (c) {
-        return c === 1 ? "மாதம�" : "மாதங�கள�";
+        return c === 1 ? "மாதம்" : "மாதங்கள்";
       },
       w: function (c) {
-        return c === 1 ? "வாரம�" : "வாரங�கள�";
+        return c === 1 ? "வாரம்" : "வாரங்கள்";
       },
       d: function (c) {
-        return c === 1 ? "நாள�" : "நாட�கள�";
+        return c === 1 ? "நாள்" : "நாட்கள்";
       },
       h: function (c) {
-        return c === 1 ? "மணி" : "மணிநேரம�";
+        return c === 1 ? "மணி" : "மணிநேரம்";
       },
       m: function (c) {
-        return "நிமிட" + (c === 1 ? "ம�" : "ங�கள�");
+        return "நிமிட" + (c === 1 ? "ம்" : "ங்கள்");
       },
       s: function (c) {
-        return "வினாடி" + (c === 1 ? "" : "கள�");
+        return "வினாடி" + (c === 1 ? "" : "கள்");
       },
       ms: function (c) {
-        return "மில�லி விநாடி" + (c === 1 ? "" : "கள�");
+        return "மில்லி விநாடி" + (c === 1 ? "" : "கள்");
       }
     },
     te: {
       y: function (c) {
-        return "సంవత�స" + (c === 1 ? "రం" : "రాల");
+        return "సంవత్స" + (c === 1 ? "రం" : "రాల");
       },
       mo: function (c) {
         return "నెల" + (c === 1 ? "" : "ల");
       },
       w: function (c) {
-        return c === 1 ? "వారం" : "వారాల�";
+        return c === 1 ? "వారం" : "వారాలు";
       },
       d: function (c) {
-        return "రోజ�" + (c === 1 ? "" : "ల�");
+        return "రోజు" + (c === 1 ? "" : "లు");
       },
       h: function (c) {
-        return "గంట" + (c === 1 ? "" : "ల�");
+        return "గంట" + (c === 1 ? "" : "లు");
       },
       m: function (c) {
-        return c === 1 ? "నిమిషం" : "నిమిషాల�";
+        return c === 1 ? "నిమిషం" : "నిమిషాలు";
       },
       s: function (c) {
-        return c === 1 ? "సెకన�" : "సెకన�ల�";
+        return c === 1 ? "సెకను" : "సెకన్లు";
       },
       ms: function (c) {
-        return c === 1 ? "మిల�లీసెకన�" : "మిల�లీసెకన�ల�";
+        return c === 1 ? "మిల్లీసెకన్" : "మిల్లీసెకన్లు";
       }
     },
     uk: {
@@ -1257,7 +1257,7 @@ catch (err) {
         return ["років", "рік", "роки"][getSlavicForm(c)];
       },
       mo: function (c) {
-        return ["мі��ців", "мі��ць", "мі��ці"][getSlavicForm(c)];
+        return ["місяців", "місяць", "місяці"][getSlavicForm(c)];
       },
       w: function (c) {
         return ["тижнів", "тиждень", "тижні"][getSlavicForm(c)];
@@ -1272,24 +1272,24 @@ catch (err) {
         return ["хвилин", "хвилина", "хвилини"][getSlavicForm(c)];
       },
       s: function (c) {
-        return ["�екунд", "�екунда", "�екунди"][getSlavicForm(c)];
+        return ["секунд", "секунда", "секунди"][getSlavicForm(c)];
       },
       ms: function (c) {
-        return ["мілі�екунд", "мілі�екунда", "мілі�екунди"][getSlavicForm(c)];
+        return ["мілісекунд", "мілісекунда", "мілісекунди"][getSlavicForm(c)];
       },
       decimal: ","
     },
     ur: {
       y: "سال",
       mo: function (c) {
-        return c === 1 ? "م�ین�" : "م�ینے";
+        return c === 1 ? "مہینہ" : "مہینے";
       },
       w: function (c) {
-        return c === 1 ? "��ت�" : "��تے";
+        return c === 1 ? "ہفتہ" : "ہفتے";
       },
       d: "دن",
       h: function (c) {
-        return c === 1 ? "گھنٹ�" : "گھنٹے";
+        return c === 1 ? "گھنٹہ" : "گھنٹے";
       },
       m: "منٹ",
       s: "سیکنڈ",
@@ -1493,7 +1493,7 @@ catch (err) {
       mo: "tháng",
       w: "tuần",
       d: "ngày",
-      h: "gi�",
+      h: "giờ",
       m: "phút",
       s: "giây",
       ms: "mili giây",
@@ -1504,7 +1504,7 @@ catch (err) {
       mo: "个月",
       w: "周",
       d: "天",
-      h: "�时",
+      h: "小时",
       m: "分钟",
       s: "秒",
       ms: "毫秒",
@@ -1515,8 +1515,8 @@ catch (err) {
       mo: "個月",
       w: "周",
       d: "天",
-      h: "�時",
-      m: "分�",
+      h: "小時",
+      m: "分鐘",
       s: "秒",
       ms: "毫秒",
       decimal: "."
@@ -8358,99 +8358,94 @@ Pm4JS.registerExporter("CsvExporter", "apply", "EventLog", "csv", "text/csv", "C
 
 
 class XesExporter {
-	static apply(eventLog) {
-		let xmlDoc = document.createElement("log");
-		XesExporter.exportXmlObjToDom(eventLog, xmlDoc);
-		let serializer = null;
-		try {
-			serializer = new XMLSerializer();
-		}
-		catch (err) {
-			serializer = require('xmlserializer');
-		}
-		const xmlStr = serializer.serializeToString(xmlDoc);
-		return xmlStr;
-	}
-	
-	static exportXmlObjToDom(obj, dom) {
-		for (let att in obj.attributes) {
-			let attValue = obj.attributes[att].value;
-			let xmlTag = null;
-			let value = null;
-			if (typeof attValue == "string") {
-				xmlTag = "string";
-				value = attValue;
-			}
-			else if (typeof attValue == "object") {
-				xmlTag = "date";
-				value = attValue.toISOString();
-			}
-			else if (typeof attValue == "number") {
-				xmlTag = "float";
-				value = ""+attValue;
-			}
-			
-			if (value != null) {
-				let attr = document.createElement(xmlTag);
-				dom.appendChild(attr);
-				attr.setAttribute("key", att);
-				attr.setAttribute("value", value);
-				XesExporter.exportXmlObjToDom(obj.attributes[att], attr);
-			}
-		}
-		if (obj.constructor.name == "EventLog") {
-			for (let ext in obj.extensions) {
-				let extValue = obj.extensions[ext];
-				let xmlExtension = document.createElement("extension");
-				dom.appendChild(xmlExtension);
-				xmlExtension.setAttribute("name", ext);
-				xmlExtension.setAttribute("prefix", extValue[0]);
-				xmlExtension.setAttribute("uri", extValue[1]);
-			}
-			for (let scope in obj.globals) {
-				let global = obj.globals[scope];
-				let xmlGlobal = document.createElement("global");
-				dom.appendChild(xmlGlobal);
-				xmlglobalThis.setAttribute("scope", scope);
-				XesExporter.exportXmlObjToDom(global, xmlGlobal);
-			}
-			for (let classifier in obj.classifiers) {
-				let xmlClassifier = document.createElement("classifier");
-				dom.appendChild(xmlClassifier);
-				xmlClassifier.setAttribute("name", classifier);
-				xmlClassifier.setAttribute("keys", obj.classifiers[classifier]);
-			}
-			for (let trace of obj.traces) {
-				let xmlTrace = document.createElement("trace");
-				dom.appendChild(xmlTrace);
-				XesExporter.exportXmlObjToDom(trace, xmlTrace);
-			}
-		}
-		else if (obj.constructor.name == "Trace") {
-			for (let eve of obj.events) {
-				let xmlEvent = document.createElement("event");
-				dom.appendChild(xmlEvent);
-				XesExporter.exportXmlObjToDom(eve, xmlEvent);
-			}
-		}
-	}
+  static apply(eventLog) {
+    let xmlDoc = document.createElement("log");
+    XesExporter.exportXmlObjToDom(eventLog, xmlDoc);
+    let serializer = null;
+    try {
+      serializer = new XMLSerializer();
+    } catch (err) {
+      serializer = require("xmlserializer");
+    }
+    const xmlStr = serializer.serializeToString(xmlDoc);
+    return xmlStr;
+  }
+
+  static exportXmlObjToDom(obj, dom) {
+    for (let att in obj.attributes) {
+      let attValue = obj.attributes[att].value;
+      let xmlTag = null;
+      let value = null;
+      if (typeof attValue == "string") {
+        xmlTag = "string";
+        value = attValue;
+      } else if (typeof attValue == "object") {
+        xmlTag = "date";
+        value = attValue.toISOString();
+      } else if (typeof attValue == "number") {
+        xmlTag = "float";
+        value = "" + attValue;
+      }
+
+      if (value != null) {
+        let attr = document.createElement(xmlTag);
+        dom.appendChild(attr);
+        attr.setAttribute("key", att);
+        attr.setAttribute("value", value);
+        XesExporter.exportXmlObjToDom(obj.attributes[att], attr);
+      }
+    }
+    if (obj.constructor.name == "EventLog") {
+      for (let ext in obj.extensions) {
+        let extValue = obj.extensions[ext];
+        let xmlExtension = document.createElement("extension");
+        dom.appendChild(xmlExtension);
+        xmlExtension.setAttribute("name", ext);
+        xmlExtension.setAttribute("prefix", extValue[0]);
+        xmlExtension.setAttribute("uri", extValue[1]);
+      }
+      for (let scope in obj.globals) {
+        let global = obj.globals[scope];
+        let xmlGlobal = document.createElement("global");
+        dom.appendChild(xmlGlobal);
+        xmlGlobal.setAttribute("scope", scope);
+        XesExporter.exportXmlObjToDom(global, xmlGlobal);
+      }
+      for (let classifier in obj.classifiers) {
+        let xmlClassifier = document.createElement("classifier");
+        dom.appendChild(xmlClassifier);
+        xmlClassifier.setAttribute("name", classifier);
+        xmlClassifier.setAttribute("keys", obj.classifiers[classifier]);
+      }
+      for (let trace of obj.traces) {
+        let xmlTrace = document.createElement("trace");
+        dom.appendChild(xmlTrace);
+        XesExporter.exportXmlObjToDom(trace, xmlTrace);
+      }
+    } else if (obj.constructor.name == "Trace") {
+      for (let eve of obj.events) {
+        let xmlEvent = document.createElement("event");
+        dom.appendChild(xmlEvent);
+        XesExporter.exportXmlObjToDom(eve, xmlEvent);
+      }
+    }
+  }
 }
 
 try {
-	require('../../../../pm4js.js');
-	require('../../log.js');
-	module.exports = {XesExporter: XesExporter};
-	globalThis.XesExporter = XesExporter;
-	const jsdom = require("jsdom");
-	const { JSDOM } = jsdom;
-	globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
+  require("../../../../pm4js.js");
+  require("../../log.js");
+  module.exports = { XesExporter: XesExporter };
+  globalThis.XesExporter = XesExporter;
+  const jsdom = require("jsdom");
+  const { JSDOM } = jsdom;
+  globalThis.dom = new JSDOM("<!doctype html><html><body></body></html>");
   globalThis.window = dom.window;
   globalThis.document = dom.window.document;
   globalThis.navigator = globalThis.window.navigator;
-}
-catch (err) {
-	// not in node
-	//console.log(err);
+} catch (err) {
+  // not in node
+  //console.log(err);
 }
 
 Pm4JS.registerExporter("XesExporter", "apply", "EventLog", "xes", "text/xml", "XES Exporter", "Alessandro Berti");
@@ -18466,8 +18461,8 @@ CelonisMapper.PROXY_URL_POST = "http://localhost:5004/postWrapper";
 CelonisMapper.PROXY_URL_PUT = "http://localhost:5004/putWrapper";
 try {
 	globalThis.retus = require("retus");
-	require('../../pm4js.js');
-	globalThis.CelonisMapper = CelonisMapper;
+  require("../../pm4js.js");
+  globalThis.CelonisMapper = CelonisMapper;
 	module.exports = {CelonisMapper: CelonisMapper};
 	CelonisMapper.IS_NODE = true;
 }
@@ -21239,7 +21234,8 @@ class NetworkAnalysisGraphvizVisualizer {
 try {
 	require('../../pm4js.js');
 	module.exports = {NetworkAnalysisGraphvizVisualizer: NetworkAnalysisGraphvizVisualizer};
-	globalThis.NetworkAnalysisGraphvizVisualizer = NetworkAnalysisGraphvizVisualizer;
+	globalThis.NetworkAnalysisGraphvizVisualizer =
+    NetworkAnalysisGraphvizVisualizer;
 }
 catch (err) {
 	// not in node
