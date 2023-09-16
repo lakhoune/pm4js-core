@@ -8,15 +8,18 @@
   },
   "dependencies": {
     "retus": "^1.1.2",
+    "sql.js": "^1.8.0",
     "xmldom": "^0.6.0",
-    "xmlserializer": "^0.6.1",
-    "sql.js": "^1.8.0"
+    "xmlserializer": "^0.6.1"
   },
   "devDependencies": {
-    "jest": "^27.1.1"
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "jest": "^27.1.1",
+    "rollup": "^3.29.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rollup -c --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
